@@ -1,0 +1,10 @@
+Lettertypen van deze site
+========================
+
+Bricolage Grotesque, IBM Plex Sans en IBM Plex Mono, opgehaald bij Google Fonts op 8 november 2026
+(alleen de tekens voor Nederlands en andere West-Europese talen).
+
+Licentie: SIL Open Font License 1.1 - vrij te gebruiken, ook op een commerciele website.
+https://openfontlicense.org
+Bricolage Grotesque: https://fonts.google.com/specimen/Bricolage+Grotesque
+IBM Plex: https://fonts.google.com/specimen/IBM+Plex+Sans en https://fonts.google.com/specimen/IBM+Plex+Mono
