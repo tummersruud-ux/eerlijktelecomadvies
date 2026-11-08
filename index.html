@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eerlijk Telecomadvies — sim only en internet vergelijken zonder ruis</title>
+<meta name="description" content="Vergelijk sim only abonnementen en internetproviders in Nederland. Wij vertellen op welk netwerk elke aanbieder rijdt en waar wij aan verdienen.">
+
+<!--
+==========================================================================
+  BEWERKEN — LEES DIT EERST
+==========================================================================
+  Deze pagina is bewust "platte" HTML: alle tekst staat gewoon in het
+  bestand en niet in JavaScript. Dat is expres. Google leest platte HTML
+  betrouwbaarder, en voor een site die het van zoekverkeer moet hebben is
+  dat belangrijker dan makkelijk bewerken.
+
+  Wat jij regelmatig moet aanpassen, staat gemarkeerd met:
+
+      <!-- BEWERK: ... -- >
+
+  Zoek in dit bestand op "BEWERK" en je vindt alle plekken.
+
+  De VIER dingen die je moet invullen voordat je live gaat:
+   1. De gele bouwnotitie hieronder verwijderen (zoek: BEWERK 1)
+   2. Prijzen en bundels in de tabel      (zoek: BEWERK 3)
+   3. Je affiliate-links op de knoppen    (zoek: BEWERK 3)
+   4. De controledatum onder de tabel     (zoek: BEWERK 4)
+==========================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16212B; --ink-soft:#5A6B77; --paper:#EFF1EC; --card:#FFFFFF;
+  --signal:#0B6E5B; --signal-tint:#E2F0EA; --flag:#A63B22; --flag-tint:#F7E9E4;
+  --line:#D6DAD2;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:2px}
+
+.buildnote{background:#FFF3C4;border-bottom:1px solid #E5D08A;font-size:14px;padding:10px 0;color:#5A4A12}
+
+.top{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.top .wrap{display:flex;align-items:center;gap:26px;height:66px}
+.mark{display:flex;align-items:center;gap:9px;font-family:var(--display);font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none}
+.bars{display:flex;align-items:flex-end;gap:2px;height:16px}
+.bars i{display:block;width:3px;background:var(--signal);border-radius:1px}
+.bars i:nth-child(1){height:5px}.bars i:nth-child(2){height:9px}
+.bars i:nth-child(3){height:13px}.bars i:nth-child(4){height:16px}
+.mark span{color:#8FA3AF;font-weight:500}
+.nav{margin-left:auto;display:flex;gap:22px;font-size:15px}
+.nav a{text-decoration:none;color:#C6D2D9;padding:4px 0;border-bottom:2px solid transparent}
+.nav a:hover{color:#fff;border-bottom-color:var(--signal)}
+
+.hero{padding:64px 0 52px}
+.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:start}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--signal);font-weight:600;margin-bottom:18px}
+h1{font-family:var(--display);font-size:clamp(38px,5.4vw,60px);line-height:1.02;letter-spacing:-.035em;font-weight:800;max-width:14ch}
+.lede{margin-top:20px;font-size:18.5px;color:var(--ink-soft);max-width:48ch}
+.chooser{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px}
+.chooser a{text-decoration:none;background:var(--ink);color:#fff;padding:13px 20px;border-radius:2px;font-weight:600;font-size:15.5px;transition:background .15s ease}
+.chooser a:hover{background:var(--signal)}
+.chooser a.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.chooser a.ghost:hover{background:var(--ink);color:#fff}
+
+.earn{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--signal);padding:26px}
+.earn h2{font-family:var(--display);font-size:19px;letter-spacing:-.02em;margin-bottom:6px}
+.earn p{font-size:15px;color:var(--ink-soft)}
+.earn ul{list-style:none;margin-top:18px;display:grid;gap:14px}
+.earn li{display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:14.5px;line-height:1.5}
+.tick{width:20px;height:20px;border-radius:50%;background:var(--signal-tint);color:var(--signal);display:grid;place-items:center;font-size:12px;font-weight:700;margin-top:2px}
+
+section{padding:56px 0}
+.sec-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:8px}
+.sec-head h2{font-family:var(--display);font-size:clamp(27px,3.4vw,36px);letter-spacing:-.03em;font-weight:700}
+.sec-note{font-size:15px;color:var(--ink-soft);max-width:62ch;margin-bottom:28px}
+
+.tablewrap{background:var(--card);border:1px solid var(--line);overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:700px}
+th{text-align:left;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;padding:14px 16px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:16px;border-bottom:1px solid var(--line);font-size:15.5px;vertical-align:middle}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#F7F8F5}
+.prov{font-weight:600}
+.netwerk{display:block;font-size:12.5px;color:var(--ink-soft);font-weight:400;margin-top:3px}
+.num{font-family:var(--mono);font-weight:600}
+.leeg{font-family:var(--mono);color:var(--flag);background:var(--flag-tint);padding:2px 7px;font-size:13.5px;border-radius:2px;font-weight:400}
+.go{display:inline-block;text-decoration:none;background:var(--signal);color:#fff;padding:9px 15px;border-radius:2px;font-size:14px;font-weight:600;white-space:nowrap}
+.go:hover{background:#095443}
+.aff{font-family:var(--mono);font-size:11px;color:var(--ink-soft);display:block;margin-top:5px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.kaart{background:var(--card);padding:26px 24px 24px;text-decoration:none;display:flex;flex-direction:column;min-height:192px;transition:background .15s ease}
+.kaart:hover{background:#F7F8F5}
+.tag{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+.tag.koop{color:var(--signal)}
+.tag.uitleg{color:var(--ink-soft)}
+.kaart h3{font-family:var(--display);font-size:21px;line-height:1.15;letter-spacing:-.02em;font-weight:700}
+.kaart p{margin-top:10px;font-size:14.5px;color:var(--ink-soft);line-height:1.5}
+.kaart .pijl{margin-top:auto;padding-top:16px;font-size:14px;font-weight:600;color:var(--signal)}
+.kaart.leeg-kaart{opacity:.55}
+.kaart.leeg-kaart .pijl{color:var(--ink-soft)}
+
+.werk{background:var(--ink);color:#fff}
+.werk h2{color:#fff}
+.werk .sec-note{color:#9DB0BC}
+.regels{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;margin-top:12px}
+.regel h3{font-family:var(--display);font-size:17.5px;margin-bottom:8px;letter-spacing:-.01em}
+.regel p{font-size:14.5px;color:#9DB0BC;line-height:1.55}
+.regel .nr{font-family:var(--mono);font-size:12px;color:var(--signal);font-weight:600;display:block;margin-bottom:10px}
+
+footer{background:#0E1720;color:#8FA3AF;font-size:14px;padding:42px 0 34px}
+.disc{background:rgba(11,110,91,.14);border-left:3px solid var(--signal);padding:16px 18px;margin-bottom:26px;color:#C6D2D9;max-width:74ch;line-height:1.55}
+.fbot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;border-top:1px solid #22303B;padding-top:20px}
+.fbot a{color:#8FA3AF}
+
+@media (max-width:820px){
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero{padding:44px 0 36px}
+  .nav{display:none}
+  section{padding:42px 0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="index.html" class="mark">
+      <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      eerlijk<span>telecomadvies</span>
+    </a>
+    <nav class="nav">
+      <a href="#simonly">Sim only</a>
+      <a href="#artikelen">Artikelen</a>
+      <a href="#werkwijze">Zo werken wij</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Vergelijken zonder verkooppraat</p>
+      <h1>Betaal niet meer dan je nodig hebt.</h1>
+      <p class="lede">De meeste mensen zitten op een abonnement dat ooit paste. Hier zie je per aanbieder op welk netwerk je eigenlijk belt, of eSIM kan, en waar je het actuele aanbod vindt.</p>
+      <div class="chooser">
+        <a href="#simonly">Sim only vergelijken</a>
+        <a href="#artikelen" class="ghost">Eerst uitleg lezen</a>
+      </div>
+    </div>
+
+    <aside class="earn">
+      <h2>Hoe wij geld verdienen</h2>
+      <p>Geen verstoppertje. Dit hoor je gewoon te weten.</p>
+      <ul>
+        <li><span class="tick" aria-hidden="true">✓</span><span>Sluit je via onze link een abonnement af, dan krijgen wij een vergoeding van de aanbieder.</span></li>
+        <li><span class="tick" aria-hidden="true">✓</span><span>Jij betaalt daardoor niets extra — de prijs is dezelfde als rechtstreeks.</span></li>
+        <li><span class="tick" aria-hidden="true">✓</span><span>De volgorde in onze tabellen hangt niet af van wie het meest betaalt. Aanbieders zonder vergoeding staan er ook gewoon in.</span></li>
+      </ul>
+    </aside>
+  </div>
+</div>
+
+<section id="simonly">
+  <div class="wrap">
+    <div class="sec-head"><h2>Sim only abonnementen</h2></div>
+    <p class="sec-note">Nederland heeft maar drie mobiele netwerken: KPN, Odido en Vodafone. Alle andere aanbieders huren capaciteit op één van die drie. Welk netwerk dat is, bepaalt je bereik — en dat zie je bij ons in de eerste kolom staan.</p>
+
+    <!--
+      BEWERK 3: aanbieders
+      --------------------
+      Tijdelijk zonder prijzen (keuze eigenaar 8 november 2026): prijzen veranderen vaak en komen er pas in
+      als ze dagelijks uit de Daisycon-feed komen. Tot die tijd linkt elke rij gewoon naar de aanbieder.
+      Zodra je bij een aanbieder bent aangenomen: vervang de link door je affiliate-link, zet
+      rel="sponsored nofollow" erop en verander het grijze label onder de knop in "affiliate link".
+      eSIM "Ja" alleen als je het op de site van de aanbieder zelf hebt gezien (zie esim-providers.html).
+    -->
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Aanbieder &amp; netwerk</th>
+            <th>eSIM</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="prov">KPN<span class="netwerk">Eigen netwerk</span></td>
+            <td class="num"><span class="ja">Ja</span></td>
+            <td><a href="https://www.kpn.com/" class="go" rel="nofollow noopener" target="_blank">Aanbod bij KPN</a><span class="aff">kpn.com</span></td>
+          </tr>
+          <tr>
+            <td class="prov">Odido<span class="netwerk">Eigen netwerk</span></td>
+            <td class="num"><span class="ja">Ja</span></td>
+            <td><a href="https://www.odido.nl/" class="go" rel="nofollow noopener" target="_blank">Aanbod bij Odido</a><span class="aff">odido.nl</span></td>
+          </tr>
+          <tr>
+            <td class="prov">Vodafone<span class="netwerk">Eigen netwerk</span></td>
+            <td class="num"><span class="ja">Ja</span></td>
+            <td><a href="https://www.vodafone.nl/" class="go" rel="nofollow noopener" target="_blank">Aanbod bij Vodafone</a><span class="aff">vodafone.nl</span></td>
+          </tr>
+          <tr>
+            <td class="prov">Simyo<span class="netwerk">KPN-netwerk · merk van KPN</span></td>
+            <td class="num"><span class="ja">Ja</span></td>
+            <td><a href="https://www.simyo.nl/" class="go" rel="nofollow noopener" target="_blank">Aanbod bij Simyo</a><span class="aff">simyo.nl</span></td>
+          </tr>
+          <tr>
+            <td class="prov">Lebara<span class="netwerk">KPN-netwerk</span></td>
+            <td class="num">Onbekend</td>
+            <td><a href="https://www.lebara.nl/" class="go" rel="nofollow noopener" target="_blank">Aanbod bij Lebara</a><span class="aff">lebara.nl</span></td>
+          </tr>
+          <tr>
+            <td class="prov">Youfone<span class="netwerk">KPN-netwerk</span></td>
+            <td class="num">Onbekend</td>
+            <td><a href="https://www.youfone.nl/" class="go" rel="nofollow noopener" target="_blank">Aanbod bij Youfone</a><span class="aff">youfone.nl</span></td>
+          </tr>
+          <tr>
+            <td class="prov">Ben<span class="netwerk">Odido-netwerk · merk van Odido</span></td>
+            <td class="num"><span class="ja">Ja</span></td>
+            <td><a href="https://www.ben.nl/" class="go" rel="nofollow noopener" target="_blank">Aanbod bij Ben</a><span class="aff">ben.nl</span></td>
+          </tr>
+          <tr>
+            <td class="prov">Simpel<span class="netwerk">Odido-netwerk</span></td>
+            <td class="num"><span class="ja">Ja</span></td>
+            <td><a href="https://www.simpel.nl/" class="go" rel="nofollow noopener" target="_blank">Aanbod bij Simpel</a><span class="aff">simpel.nl</span></td>
+          </tr>
+          <tr>
+            <td class="prov">hollandsnieuwe<span class="netwerk">Vodafone-netwerk · merk van Vodafone</span></td>
+            <td class="num"><span class="ja">Ja</span></td>
+            <td><a href="https://www.hollandsnieuwe.nl/" class="go" rel="nofollow noopener" target="_blank">Aanbod bij hollandsnieuwe</a><span class="aff">hollandsnieuwe.nl</span></td>
+          </tr>
+          <tr>
+            <td class="prov">50+ Mobiel<span class="netwerk">Vodafone-netwerk</span></td>
+            <td class="num"><span class="ja">Ja</span></td>
+            <td><a href="https://www.50plusmobiel.nl/" class="go" rel="nofollow noopener" target="_blank">Aanbod bij 50+ Mobiel</a><span class="aff">50plusmobiel.nl</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- BEWERK 4: zodra de prijzen er (uit de feed) in staan: vervang deze zin door "Prijzen nagekeken op <datum> ..." -->
+    <p class="sec-note" style="margin-top:14px">Prijzen zetten we hier pas neer als we ze dagelijks bij de aanbieders zelf kunnen controleren; tarieven en acties veranderen te vaak. Bekijk het actuele aanbod via de knop bij de aanbieder. Meer over eSIM per aanbieder lees je in <a href="esim-providers.html">ons overzicht</a>.</p>
+  </div>
+</section>
+
+<section id="artikelen" style="padding-top:12px">
+  <div class="wrap">
+    <div class="sec-head"><h2>Uitzoeken voor je kiest</h2></div>
+    <p class="sec-note">Eerst begrijpen wat je koopt, dan pas vergelijken.</p>
+
+    <!-- BEWERK 5: artikelen. Kopieer een <a class="kaart"> blok voor een nieuw artikel.
+         Verwijder class="leeg-kaart" zodra het artikel af is en vul de href in. -->
+    <div class="grid">
+      <a href="esim-uitleg.html" class="kaart">
+        <span class="tag uitleg">Uitleg</span>
+        <h3>eSIM: wat het is en wanneer je het nodig hebt</h3>
+        <p>De fysieke simkaart verdwijnt. Wat dat betekent voor je volgende toestel en je abonnement.</p>
+        <span class="pijl">Lezen →</span>
+      </a>
+      <a href="esim-providers.html" class="kaart">
+        <span class="tag uitleg">Overzicht</span>
+        <h3>Welke providers bieden eSIM aan?</h3>
+        <p>Per aanbieder nagekeken op de eigen site, met de bron erbij.</p>
+        <span class="pijl">Lezen →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="werk" id="werkwijze">
+  <div class="wrap">
+    <div class="sec-head"><h2>Zo werken wij</h2></div>
+    <p class="sec-note">Vier afspraken met jou. Wijken we ervan af, dan staat dat erbij.</p>
+    <div class="regels">
+      <div class="regel">
+        <span class="nr">01</span>
+        <h3>Alle aanbieders, ook zonder vergoeding</h3>
+        <p>Is er een beter aanbod waar wij niets aan verdienen? Dan staat dat er gewoon bij, zonder link.</p>
+      </div>
+      <div class="regel">
+        <span class="nr">02</span>
+        <h3>Prijzen met een datum</h3>
+        <p>Bij elke tabel staat wanneer we hem hebben nagekeken, en waar we het hebben nagekeken. Geen datum betekent: niet vertrouwen.</p>
+      </div>
+      <div class="regel">
+        <span class="nr">03</span>
+        <h3>Geen nepschaarste</h3>
+        <p>Geen aftellende klokjes, geen "nog 3 beschikbaar". Als een actie afloopt, zeggen we wanneer.</p>
+      </div>
+      <div class="regel">
+        <span class="nr">04</span>
+        <h3>Fout gezien? Zeg het</h3>
+        <p>Klopt iets niet meer, dan passen we het aan en vermelden we de wijziging.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="disc"><strong>Affiliate-vermelding:</strong> deze site bevat links waarvoor wij een vergoeding ontvangen als je via ons een abonnement afsluit. Dat kost jou niets extra en beïnvloedt onze volgorde niet. Deze links zijn herkenbaar aan de aanduiding "affiliate link".</p>
+    <div class="fbot">
+      <!-- BEWERK 6: vul je eigen gegevens en paginalinks in -->
+      <span>© 2026 eerlijktelecomadvies.nl</span>
+      <span>
+        <a href="over-ons.html">Over ons</a> ·
+        <a href="contact.html">Contact</a> ·
+        <a href="privacy.html">Privacy &amp; cookies</a> ·
+        <a href="affiliate-beleid.html">Affiliate-beleid</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

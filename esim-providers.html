@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welke providers bieden eSIM in Nederland? Het complete overzicht — Eerlijk Telecomadvies</title>
+<meta name="description" content="Overzicht van alle Nederlandse providers die eSIM aanbieden, nagekeken bij de providers zelf. Inclusief de sites die er nog naast zitten.">
+
+<!--
+==========================================================================
+  BEWERKEN
+==========================================================================
+  BEWERK 1 – verwijder de gele bouwnotitie voor je live gaat
+  BEWERK 2 – vul de datum in waarop jij dit hebt nagekeken
+  BEWERK 3 – de tabel. Let op de kolom "Bron":
+       Ingevuld  = ik heb dit gecontroleerd op de site van de provider zelf
+       Rood      = nog door jou te controleren, link staat erbij
+       Klik ze allemaal even na voor je publiceert. De hele waarde van
+       dit artikel is dat het klopt terwijl de concurrentie ernaast zit.
+  BEWERK 4 – affiliate-links in het slotblok
+==========================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16212B; --ink-soft:#5A6B77; --paper:#EFF1EC; --card:#FFFFFF;
+  --signal:#0B6E5B; --signal-tint:#E2F0EA; --flag:#A63B22; --flag-tint:#F7E9E4;
+  --line:#D6DAD2;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:2px}
+
+.buildnote{background:#FFF3C4;border-bottom:1px solid #E5D08A;font-size:14px;padding:10px 0;color:#5A4A12}
+
+.top{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.top .wrap{display:flex;align-items:center;gap:26px;height:66px}
+.mark{display:flex;align-items:center;gap:9px;font-family:var(--display);font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none}
+.bars{display:flex;align-items:flex-end;gap:2px;height:16px}
+.bars i{display:block;width:3px;background:var(--signal);border-radius:1px}
+.bars i:nth-child(1){height:5px}.bars i:nth-child(2){height:9px}
+.bars i:nth-child(3){height:13px}.bars i:nth-child(4){height:16px}
+.mark span{color:#8FA3AF;font-weight:500}
+.nav{margin-left:auto;display:flex;gap:22px;font-size:15px}
+.nav a{text-decoration:none;color:#C6D2D9}
+.nav a:hover{color:#fff}
+
+.artikel{max-width:760px;margin:0 auto;padding:54px 22px 20px}
+.kruimel{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:22px}
+.kruimel a{text-decoration:none;color:var(--signal);font-weight:600}
+.artikel h1{font-family:var(--display);font-size:clamp(31px,5vw,45px);line-height:1.07;letter-spacing:-.032em;font-weight:800}
+.meta{font-family:var(--mono);font-size:13px;color:var(--ink-soft);margin-top:20px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.intro{font-size:19.5px;color:var(--ink-soft);margin-top:28px;line-height:1.55}
+.artikel h2{font-family:var(--display);font-size:27px;letter-spacing:-.022em;font-weight:700;margin-top:46px;margin-bottom:14px}
+.artikel h3{font-family:var(--display);font-size:19px;letter-spacing:-.015em;font-weight:700;margin-top:30px;margin-bottom:8px}
+.artikel p{margin-top:16px}
+.artikel ul{margin-top:16px;padding-left:22px}
+.artikel li{margin-top:9px}
+.artikel strong{font-weight:600}
+
+.tablewrap{background:var(--card);border:1px solid var(--line);overflow-x:auto;margin-top:26px}
+table{width:100%;border-collapse:collapse;min-width:620px}
+th{text-align:left;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;padding:13px 16px;border-bottom:1px solid var(--line)}
+td{padding:14px 16px;border-bottom:1px solid var(--line);font-size:15.5px;vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+.prov{font-weight:600;white-space:nowrap}
+.netw{display:block;font-size:12.5px;color:var(--ink-soft);font-weight:400;margin-top:3px}
+.ja{color:var(--signal);font-weight:600}
+.leeg{font-family:var(--mono);color:var(--flag);background:var(--flag-tint);padding:2px 7px;font-size:13px;border-radius:2px}
+td a{color:var(--signal);font-size:14px}
+
+.uitgelicht{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--signal);padding:22px 24px;margin-top:32px}
+.uitgelicht h3{margin-top:0;font-size:17.5px}
+.uitgelicht p{margin-top:8px;font-size:15.5px;color:var(--ink-soft)}
+.check{background:var(--flag-tint);border:1px solid #E0C4BA;padding:18px 20px;margin-top:30px;font-size:15.5px}
+.check strong{color:var(--flag)}
+
+.cta{background:var(--ink);color:#fff;padding:28px 26px 26px;margin-top:44px}
+.cta h3{font-family:var(--display);font-size:21px;margin:0 0 8px;letter-spacing:-.015em}
+.cta p{color:#9DB0BC;font-size:15.5px;margin-top:8px}
+.cta a.go{display:inline-block;margin-top:18px;background:var(--signal);color:#fff;text-decoration:none;padding:13px 20px;border-radius:2px;font-weight:600;font-size:15.5px}
+.cta a.go:hover{background:#0d8770}
+.cta .aff{font-family:var(--mono);font-size:11.5px;color:#8FA3AF;display:block;margin-top:10px}
+
+footer{background:#0E1720;color:#8FA3AF;font-size:14px;padding:42px 0 34px;margin-top:60px}
+.disc{background:rgba(11,110,91,.14);border-left:3px solid var(--signal);padding:16px 18px;margin-bottom:26px;color:#C6D2D9;max-width:74ch;line-height:1.55}
+
+@media (max-width:820px){.nav{display:none}.artikel{padding-top:36px}}
+.fbot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;border-top:1px solid #22303B;padding-top:20px}
+.fbot a{color:#8FA3AF}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="index.html" class="mark">
+      <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      eerlijk<span>telecomadvies</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#simonly">Sim only</a>
+      <a href="adviestool.html">Adviestool</a>
+      <a href="index.html#artikelen">Artikelen</a>
+    </nav>
+  </div>
+</header>
+
+<article class="artikel">
+  <p class="kruimel"><a href="index.html">Home</a> › Uitleg › eSIM per provider</p>
+
+  <h1>Welke Nederlandse providers bieden eSIM aan?</h1>
+
+  <!-- BEWERK 2: datum invullen -->
+  <p class="meta">Nagekeken bij de providers zelf in november 2026 · Leestijd 4 minuten</p>
+
+  <p class="intro">Dit lijkt een simpele vraag met een simpel antwoord. Toch staan er op dit moment meerdere Nederlandse vergelijkingssites die beweren dat providers geen eSIM aanbieden, terwijl die providers op hun eigen website uitgebreid uitleggen hoe je er een aanvraagt. Wij hebben het per provider nagekeken bij de bron.</p>
+
+  <h2>Het overzicht</h2>
+
+  <!-- BEWERK 3: controleer elke rij bij de provider zelf en vul de rode cellen aan -->
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Provider</th><th>eSIM</th><th>Voor wie</th><th>Bron</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="prov">KPN<span class="netw">Eigen netwerk</span></td>
+          <td class="ja">Ja</td>
+          <td>Nieuwe en bestaande klanten</td>
+          <td><a href="https://www.kpn.com/service/mobiel/e-sim-downloaden-en-instellen.htm" rel="nofollow noopener" target="_blank">kpn.com</a></td>
+        </tr>
+        <tr>
+          <td class="prov">Odido<span class="netw">Eigen netwerk</span></td>
+          <td class="ja">Ja</td>
+          <td>Nieuwe en bestaande klanten</td>
+          <td><a href="https://www.odido.nl/esim" rel="nofollow noopener" target="_blank">odido.nl</a></td>
+        </tr>
+        <tr>
+          <td class="prov">Vodafone<span class="netw">Eigen netwerk</span></td>
+          <td class="ja">Ja</td>
+          <td>Nieuwe en bestaande klanten</td>
+          <td><a href="https://www.vodafone.nl/esim" rel="nofollow noopener" target="_blank">vodafone.nl</a></td>
+        </tr>
+        <tr>
+          <td class="prov">Simyo<span class="netw">KPN-netwerk</span></td>
+          <td class="ja">Ja</td>
+          <td>Ook voor prepaid</td>
+          <td><a href="https://www.simyo.nl/esim" rel="nofollow noopener" target="_blank">simyo.nl</a></td>
+        </tr>
+        <tr>
+          <td class="prov">Youfone<span class="netw">KPN-netwerk</span></td>
+          <td class="ja">Ja</td>
+          <td>Gratis bij een nieuw abonnement met eSIM</td>
+          <td><a href="https://www.youfone.nl/esim" rel="nofollow noopener" target="_blank">youfone.nl</a></td>
+        </tr>
+        <tr>
+          <td class="prov">Ben<span class="netw">Odido-netwerk</span></td>
+          <td class="ja">Ja</td>
+          <td>Nieuwe en bestaande klanten</td>
+          <td><a href="https://www.ben.nl/esim" rel="nofollow noopener" target="_blank">ben.nl</a></td>
+        </tr>
+        <tr>
+          <td class="prov">Simpel<span class="netw">Odido-netwerk</span></td>
+          <td class="ja">Ja</td>
+          <td>Bij bestellen, verlengen of omruilen</td>
+          <td><a href="https://www.simpel.nl/esim" rel="nofollow noopener" target="_blank">simpel.nl</a></td>
+        </tr>
+        <tr>
+          <td class="prov">hollandsnieuwe<span class="netw">Vodafone-netwerk</span></td>
+          <td class="ja">Ja</td>
+          <td>Gratis te kiezen bij bestellen</td>
+          <td><a href="https://www.hollandsnieuwe.nl/esim" rel="nofollow noopener" target="_blank">hollandsnieuwe.nl</a></td>
+        </tr>
+        <tr>
+          <td class="prov">50+ Mobiel<span class="netw">Vodafone-netwerk</span></td>
+          <td class="ja">Ja, sinds 1 juni 2026</td>
+          <td>Nieuwe en bestaande klanten, via de app</td>
+          <td><a href="https://www.50plusmobiel.nl/esim" rel="nofollow noopener" target="_blank">50plusmobiel.nl</a></td>
+        </tr>
+        <tr>
+          <td class="prov">Lebara<span class="netw">KPN-netwerk</span></td>
+          <td>Onbekend</td>
+          <td>Lebara heeft een eSIM-pagina, maar de voorwaarden konden wij niet vaststellen</td>
+          <td><a href="https://www.lebara.nl/nl/esim.html" rel="nofollow noopener" target="_blank">lebara.nl</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Kort samengevat: bij vrijwel elke Nederlandse provider kun je inmiddels een eSIM krijgen. De vraag is niet meer óf het kan, maar hoe je hem aanvraagt.</p>
+
+  <h2>Wat er elders over geschreven wordt, en waarom het niet klopt</h2>
+
+  <p>Op het moment van schrijven beweren meerdere Nederlandse sites nog dat Ben, Simpel, hollandsnieuwe en 50+ Mobiel geen eSIM ondersteunen. Eén site meldt zelfs dat er in Nederland maar vier providers zijn waar het kan.</p>
+
+  <p>Dat klopt niet, en het is eenvoudig te controleren: alle vier die providers beschrijven de aanvraagprocedure stap voor stap op hun eigen website. De links staan hierboven in de laatste kolom.</p>
+
+  <p>Hoe dat komt is niet ingewikkeld. Vergelijkingssites schrijven van elkaar over, en wat er één keer fout in staat blijft jaren rondzingen. Providers voeren zo'n wijziging bovendien stilletjes door — er komt geen persbericht als er een knop bij komt in de app.</p>
+
+  <div class="uitgelicht">
+    <h3>Onze werkwijze</h3>
+    <p>Wij nemen geen informatie over van andere vergelijkingssites. Alles in de tabel hierboven is nagekeken op de website van de provider zelf, en de bron staat erbij zodat je het kunt narekenen. Konden we iets niet vaststellen, dan staat dat er zo bij in plaats van dat we het invullen.</p>
+  </div>
+
+  <h2>Hoe vraag je een eSIM aan?</h2>
+
+  <p>Bij vrijwel elke provider werkt het hetzelfde, of je nu bij Ben, Simpel of 50+ Mobiel zit.</p>
+
+  <p><strong>Ben je nieuwe klant:</strong> je kiest tijdens het bestellen voor eSIM in plaats van een fysieke simkaart. Dat kost meestal niets extra. Je krijgt na je bestelling een QR-code waarmee je de eSIM installeert.</p>
+
+  <p><strong>Ben je al klant:</strong> je vraagt de eSIM aan in de app of je online account van je provider, meestal onder een kopje als "simkaart" of "sim vervangen". Je krijgt een e-mail met een QR-code. Belangrijk: laat je huidige simkaart in je telefoon zitten tot de eSIM actief is, en zorg dat je op wifi zit tijdens het installeren.</p>
+
+  <p>Eén praktisch punt dat mensen vaak over het hoofd zien: open die e-mail met de QR-code op een ánder apparaat dan de telefoon waarop je de eSIM installeert. Je moet de code namelijk scannen met de camera van die telefoon. Lukt dat niet, dan kun je meestal ook een screenshot maken en die scannen.</p>
+
+  <h2>Ondersteunt jouw telefoon het?</h2>
+
+  <ul>
+    <li><strong>iPhone:</strong> vanaf de iPhone XS uit 2018.</li>
+    <li><strong>Samsung:</strong> vanaf de Galaxy S20 uit 2020.</li>
+    <li><strong>Google Pixel:</strong> ondersteund op vrijwel alle recente modellen.</li>
+    <li><strong>Overige Android-toestellen:</strong> per model verschillend.</li>
+  </ul>
+
+  <p>Twijfel je? Kijk in de instellingen van je telefoon bij het onderdeel over mobiele netwerken of simkaarten. Staat er een optie om een eSIM toe te voegen, dan kan je toestel het. Verschillende providers hebben ook een eSIM-check op hun site waar je je model kunt invullen.</p>
+
+  <div class="check">
+    <strong>Let op als je een reservetelefoon gebruikt.</strong> Met een fysiek kaartje wissel je in dertig seconden naar een ander toestel. Met een eSIM kan dat niet meer, en oudere reservetelefoons ondersteunen de techniek meestal niet. Ga je naar een festival of het strand en neem je liever je oude toestel mee, houd daar dan rekening mee.
+  </div>
+
+  <h2>Kost een eSIM extra?</h2>
+
+  <p>Bij de providers die wij hebben nagekeken niet: de eSIM is gratis, zowel bij een nieuw abonnement als bij het omruilen van je fysieke kaart. Wel geldt bij veel providers dat je maar één van beide tegelijk kunt gebruiken per abonnement — activeer je de eSIM, dan stopt je fysieke kaartje met werken.</p>
+
+  <!-- BEWERK 4: affiliate-links -->
+  <div class="cta">
+    <h3>Weet je nog niet welk abonnement je wilt?</h3>
+    <p>Beantwoord een paar vragen over je gebruik en je krijgt één concreet advies — inclusief of overstappen in jouw geval eigenlijk wel loont.</p>
+    <a class="go" href="adviestool.html">Naar de adviestool</a>
+    <span class="aff">Links naar aanbieders in onze vergelijking zijn affiliate links</span>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <p class="disc"><strong>Affiliate-vermelding:</strong> deze site bevat links waarvoor wij een vergoeding ontvangen als je via ons een abonnement afsluit. Dat kost jou niets extra en beïnvloedt onze volgorde niet.</p>
+    <div class="fbot">
+      <span>© 2026 eerlijktelecomadvies.nl</span>
+      <span>
+        <a href="over-ons.html">Over ons</a> ·
+        <a href="contact.html">Contact</a> ·
+        <a href="privacy.html">Privacy &amp; cookies</a> ·
+        <a href="affiliate-beleid.html">Affiliate-beleid</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
