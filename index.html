@@ -141,7 +141,7 @@ footer{background:#0E1720;color:#8FA3AF;font-size:14px;padding:42px 0 34px}
 @media (max-width:820px){
   .hero-grid{grid-template-columns:1fr;gap:32px}
   .hero{padding:44px 0 36px}
-  .nav{display:none}
+  .top .wrap{height:auto;flex-wrap:wrap;gap:4px 18px;padding-top:12px;padding-bottom:10px}.nav{margin-left:0;width:100%;gap:18px;font-size:14.5px}
   section{padding:42px 0}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
@@ -157,6 +157,7 @@ footer{background:#0E1720;color:#8FA3AF;font-size:14px;padding:42px 0 34px}
     </a>
     <nav class="nav">
       <a href="sim-only.html">Sim only</a>
+      <a href="telefoons.html">Beste telefoons</a>
       <a href="#werkwijze">Zo werken wij</a>
     </nav>
   </div>
@@ -193,6 +194,7 @@ footer{background:#0E1720;color:#8FA3AF;font-size:14px;padding:42px 0 34px}
 <!-- /AUTO:WINNAARS -->
       <div class="chooser">
         <a href="sim-only.html">Alle sim only-prijzen</a>
+        <a href="telefoons.html" class="ghost">Beste telefoons</a>
       </div>
     </div>
 
@@ -200,13 +202,46 @@ footer{background:#0E1720;color:#8FA3AF;font-size:14px;padding:42px 0 34px}
       <h2>Hoe wij geld verdienen</h2>
       <p>Geen verstoppertje. Dit hoor je gewoon te weten.</p>
       <ul>
-        <li><span class="tick" aria-hidden="true">✓</span><span>Sluit je via een affiliate link op deze site een abonnement af, dan krijgen wij een vergoeding van de aanbieder. Zulke links staan er altijd met "affiliate link" bij.</span></li>
+        <li><span class="tick" aria-hidden="true">✓</span><span>Sluit je via een affiliate link op deze site een abonnement af of koop je iets, dan krijgen wij een vergoeding van de aanbieder of winkel. Zulke links staan er altijd met "affiliate link" bij.</span></li>
         <li><span class="tick" aria-hidden="true">✓</span><span>Jij betaalt daardoor niets extra — de prijs is dezelfde als rechtstreeks.</span></li>
         <li><span class="tick" aria-hidden="true">✓</span><span>De volgorde in onze tabellen hangt niet af van wie het meest betaalt. Aanbieders zonder vergoeding staan er ook gewoon in.</span></li>
       </ul>
     </aside>
   </div>
 </div>
+
+<section id="telefoons">
+  <div class="wrap">
+    <div class="sec-head"><h2>Beste telefoons van dit moment</h2></div>
+    <p class="sec-note">Wat de testsites aanraden, met de prijs in de winkel en wat je in 2 jaar kwijt bent met de goedkoopste sim only.</p>
+    <div style="max-width:760px">
+<!-- AUTO:TELEFOONS (gemaakt door _bouw/maak.py uit data/telefoons.json; niet met de hand aanpassen) -->
+  <div class="snel">
+    <div class="rij">
+      <div class="wie"><strong>Beste iPhone</strong><a href="telefoons.html#iphone-18-pro-max">Apple iPhone 18 Pro Max</a> · <span class="bedrag">€ 1.629</span> <small>bij Coolblue</small></div>
+      <a class="go" href="https://www.coolblue.nl/mobiele-telefoons/smartphones/apple/apple-iphone-18-pro-max" rel="nofollow noopener" target="_blank" data-aff="Coolblue">Bekijk →</a>
+    </div>
+    <div class="rij">
+      <div class="wie"><strong>Beste Android</strong><a href="telefoons.html#galaxy-s26-ultra">Samsung Galaxy S26 Ultra</a> · <span class="bedrag">€ 1.099</span> <small>bij Coolblue</small></div>
+      <a class="go" href="https://www.coolblue.nl/mobiele-telefoons/smartphones/samsung/samsung-galaxy-s26-ultra" rel="nofollow noopener" target="_blank" data-aff="Coolblue">Bekijk →</a>
+    </div>
+    <div class="rij">
+      <div class="wie"><strong>Beste middenklasser</strong><a href="telefoons.html#pixel-10a">Google Pixel 10a</a> · <span class="bedrag">€ 499</span> <small>bij Coolblue</small></div>
+      <a class="go" href="https://www.coolblue.nl/product/976211/google-pixel-10a-128gb-zwart-5g.html" rel="nofollow noopener" target="_blank" data-aff="Coolblue">Bekijk →</a>
+    </div>
+    <div class="rij">
+      <div class="wie"><strong>Beste tot € 350</strong><a href="telefoons.html#galaxy-a57">Samsung Galaxy A57</a> · <span class="bedrag">€ 349</span> <small>bij Coolblue</small></div>
+      <a class="go" href="https://www.coolblue.nl/mobiele-telefoons/smartphones/samsung/samsung-galaxy-a57" rel="nofollow noopener" target="_blank" data-aff="Coolblue">Bekijk →</a>
+    </div>
+  </div>
+      <p class="uitleg-kort" style="font-size:13px;color:var(--ink-soft);margin-top:8px">Prijzen bij Coolblue op 9 november 2026. Oordelen van Tweakers, Tom's Guide en Trusted Reviews.</p>
+<!-- /AUTO:TELEFOONS -->
+    </div>
+    <div class="chooser">
+      <a href="telefoons.html">Alle telefoons en de rekensom</a>
+    </div>
+  </div>
+</section>
 
 <section id="simonly">
   <div class="wrap">
@@ -310,7 +345,7 @@ footer{background:#0E1720;color:#8FA3AF;font-size:14px;padding:42px 0 34px}
 
 <footer>
   <div class="wrap">
-    <p class="disc"><strong>Affiliate-vermelding:</strong> deze site kan links bevatten waarvoor wij een vergoeding ontvangen als je via ons een abonnement afsluit. Dat kost jou niets extra en beïnvloedt onze volgorde niet. Deze links zijn herkenbaar aan de aanduiding "affiliate link".</p>
+    <p class="disc"><strong>Affiliate-vermelding:</strong> deze site kan links bevatten waarvoor wij een vergoeding ontvangen als je via ons een abonnement afsluit of iets koopt. Dat kost jou niets extra en beïnvloedt onze volgorde niet. Deze links zijn herkenbaar aan de aanduiding "affiliate link".</p>
     <div class="fbot">
       <!-- BEWERK 6: vul je eigen gegevens en paginalinks in -->
       <span>© 2026 eerlijktelecomadvies.nl</span>
