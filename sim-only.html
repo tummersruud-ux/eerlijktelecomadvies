@@ -98,24 +98,49 @@ footer{background:#0E1720;color:#8FA3AF;font-size:14px;padding:42px 0 34px;margi
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
 /* vergelijking (gemaakt door _bouw/maak.py) */
+/* tegels bovenaan (nieuw ontwerp 15-11-2026, dezelfde als op de homepage) */
+.tegels{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.tegel{background:var(--card);color:var(--ink);border-radius:10px;padding:18px 18px 16px;display:flex;flex-direction:column;box-shadow:0 8px 26px rgba(22,33,43,.10);border-top:4px solid var(--signal);transition:transform .15s ease,box-shadow .15s ease}
+.tegel:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(22,33,43,.16)}
+.t-kop{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--signal);font-weight:600;margin:0}
+.sig{display:inline-flex;align-items:flex-end;gap:2px;height:14px}
+.sig i{display:block;width:4px;border-radius:1px;background:var(--line)}
+.sig i:nth-child(1){height:5px}.sig i:nth-child(2){height:8px}.sig i:nth-child(3){height:11px}.sig i:nth-child(4){height:14px}
+.sig i.aan{background:var(--signal)}
+.t-wie{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.02em;margin:10px 0 0;line-height:1.15}
+.t-wie span{display:block;font-family:var(--body);font-weight:500;font-size:14px;color:var(--ink-soft);letter-spacing:0}
+.t-prijs{font-family:var(--mono);font-weight:600;font-size:32px;letter-spacing:-.02em;margin:12px 0 0;line-height:1}
+.t-prijs small{font-size:13px;font-weight:400;color:var(--ink-soft);margin-left:6px;letter-spacing:0}
+.t-prijs small{display:block;margin:6px 0 0}
+.t-gem{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal);font-weight:600;margin:6px 0 0}
+.tegel.tel .t-gem{text-transform:none;letter-spacing:0;font-family:var(--body);font-weight:600;font-size:13.5px;color:var(--ink)}
+.t-noot{font-size:13.5px;color:var(--ink-soft);margin:8px 0 0;line-height:1.45;flex:1}
+.tegel a.go{display:block;text-align:center;margin-top:14px;padding:12px 8px;font-size:14px}
+.t-meer{display:block;text-align:center;font-size:13px;color:var(--ink-soft);margin-top:9px}
+.t-meer:hover{color:var(--signal)}
+.t-datum{font-size:13px;color:var(--ink-soft);margin:12px 0 0}
+@media (max-width:900px){.tegels{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.tegels{grid-template-columns:1fr}.t-prijs{font-size:30px}}
+@media (prefers-reduced-motion:reduce){.tegel:hover{transform:none}}
 .artikel.breed{max-width:980px}
 .kaartjes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:26px}
-.kaartje{background:var(--card);border:1px solid var(--line);padding:20px 20px 18px;display:flex;flex-direction:column}
-.kaartje.winnaar{border:2px solid var(--signal);box-shadow:0 6px 24px rgba(11,110,91,.12)}
+.kaartje{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 20px 18px;display:flex;flex-direction:column;box-shadow:0 4px 16px rgba(22,33,43,.05)}
+.kaartje.winnaar{border:2px solid var(--signal);border-top-width:5px;box-shadow:0 10px 28px rgba(11,110,91,.16)}
 .kaartje .plek{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--signal);font-weight:600;margin:0}
 .kaartje h3{font-family:var(--display);font-size:22px;margin:6px 0 0;letter-spacing:-.015em}
 .kaartje h3 span{font-family:var(--body);font-weight:500;font-size:15px;color:var(--ink-soft);display:block}
 .kaartje .prijs{font-family:var(--mono);font-size:30px;font-weight:600;margin:12px 0 0;color:var(--ink)}
 .kaartje .prijs small{font-size:13px;color:var(--ink-soft);font-weight:400}
-.kaartje .na{font-size:13.5px;color:var(--ink-soft);margin:2px 0 0}
+.kaartje .gem{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--signal);font-weight:600;margin:0}
+.kaartje .na{font-size:13.5px;color:var(--ink-soft);margin:6px 0 0}
 .kaartje .wat{font-size:14.5px;margin:10px 0 0}
 .kaartje .waarom{font-size:14.5px;color:var(--ink-soft);margin:8px 0 14px;flex:1}
-a.go{display:inline-block;background:var(--signal);color:#fff;text-decoration:none;padding:10px 14px;border-radius:3px;font-weight:600;font-size:14.5px;text-align:center}
+a.go{display:inline-block;background:var(--signal);color:#fff;text-decoration:none;padding:10px 14px;border-radius:6px;font-weight:600;font-size:14.5px;text-align:center}
 a.go:hover{background:#0d8770}
 a.go.groot{display:block;padding:14px 16px;font-size:16.5px}
 .naar{display:block;font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-top:5px}
 .kaartje .naar{text-align:center}
-.tablewrap{background:var(--card);border:1px solid var(--line);overflow-x:auto;margin-top:22px}
+.tablewrap{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow-x:auto;margin-top:22px}
 table{width:100%;border-collapse:collapse;min-width:760px}
 th{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;padding:12px 12px;border-bottom:1px solid var(--line)}
 td{padding:12px 12px;border-bottom:1px solid var(--line);font-size:15px;vertical-align:top}
@@ -159,22 +184,42 @@ td.prov{font-weight:600}
 
   <p class="meta">Nagekeken op 9 november 2026 bij de aanbieders zelf · 2 jaar · incl. btw · 10 aanbieders vergeleken</p>
 
-  <div class="snel">
-    <div class="rij">
-      <div class="wie"><strong>Unlimited</strong>Odido Unlimited Start · <span class="bedrag">€ 25,00</span> p/m <small>gemiddeld over 2 jaar (geen actieprijs, let op: tot 20 Mbit/s)</small></div>
-      <a class="go" href="https://www.odido.nl/mobiel-abonnement/sim-only" rel="nofollow noopener" target="_blank" data-aff="Odido">Bekijk →</a>
+  <div class="tegels">
+    <div class="tegel">
+      <p class="t-kop"><span class="sig" aria-hidden="true"><i class="aan"></i><i class=""></i><i class=""></i><i class=""></i></span>Rond 10 GB</p>
+      <p class="t-wie">50+ Mobiel <span>10 GB</span></p>
+      <p class="t-prijs">€ 5,00<small>per maand</small></p>
+      <p class="t-gem">gemiddeld over 2 jaar</p>
+      <p class="t-noot">Eerste 12 maanden € 2,50, daarna € 7,50</p>
+      <a class="go" href="https://bestellen.50plusmobiel.nl/sim-only" rel="nofollow noopener" target="_blank" data-aff="50+ Mobiel">Bekijk bij 50+ Mobiel →</a>
+      <a class="t-meer" href="sim-only.html#weinig">Alle bundels rond 10 GB</a>
     </div>
-    <div class="rij">
-      <div class="wie"><strong>Rond 10 GB</strong>50+ Mobiel 10 GB · <span class="bedrag">€ 5,00</span> p/m <small>gemiddeld over 2 jaar (eerste 12 maanden € 2,50, daarna € 7,50)</small></div>
-      <a class="go" href="https://bestellen.50plusmobiel.nl/sim-only" rel="nofollow noopener" target="_blank" data-aff="50+ Mobiel">Bekijk →</a>
+    <div class="tegel">
+      <p class="t-kop"><span class="sig" aria-hidden="true"><i class="aan"></i><i class="aan"></i><i class=""></i><i class=""></i></span>20 tot 30 GB</p>
+      <p class="t-wie">50+ Mobiel <span>25 GB</span></p>
+      <p class="t-prijs">€ 5,75<small>per maand</small></p>
+      <p class="t-gem">gemiddeld over 2 jaar</p>
+      <p class="t-noot">Eerste 12 maanden € 2,50, daarna € 9,00</p>
+      <a class="go" href="https://bestellen.50plusmobiel.nl/sim-only" rel="nofollow noopener" target="_blank" data-aff="50+ Mobiel">Bekijk bij 50+ Mobiel →</a>
+      <a class="t-meer" href="sim-only.html#gemiddeld">Alle bundels van 20 tot 30 GB</a>
     </div>
-    <div class="rij">
-      <div class="wie"><strong>20 tot 30 GB</strong>50+ Mobiel 25 GB · <span class="bedrag">€ 5,75</span> p/m <small>gemiddeld over 2 jaar (eerste 12 maanden € 2,50, daarna € 9,00)</small></div>
-      <a class="go" href="https://bestellen.50plusmobiel.nl/sim-only" rel="nofollow noopener" target="_blank" data-aff="50+ Mobiel">Bekijk →</a>
+    <div class="tegel">
+      <p class="t-kop"><span class="sig" aria-hidden="true"><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class=""></i></span>40 GB of meer</p>
+      <p class="t-wie">Simpel <span>40 GB</span></p>
+      <p class="t-prijs">€ 6,75<small>per maand</small></p>
+      <p class="t-gem">gemiddeld over 2 jaar</p>
+      <p class="t-noot">Eerste 12 maanden € 2,50, daarna € 11,00</p>
+      <a class="go" href="https://www.simpel.nl/sim-only" rel="nofollow noopener" target="_blank" data-aff="Simpel">Bekijk bij Simpel →</a>
+      <a class="t-meer" href="sim-only.html#veel">Alle bundels van 40 GB of meer</a>
     </div>
-    <div class="rij">
-      <div class="wie"><strong>40 GB of meer</strong>Simpel 40 GB · <span class="bedrag">€ 6,75</span> p/m <small>gemiddeld over 2 jaar (eerste 12 maanden € 2,50, daarna € 11,00)</small></div>
-      <a class="go" href="https://www.simpel.nl/sim-only" rel="nofollow noopener" target="_blank" data-aff="Simpel">Bekijk →</a>
+    <div class="tegel">
+      <p class="t-kop"><span class="sig" aria-hidden="true"><i class="aan"></i><i class="aan"></i><i class="aan"></i><i class="aan"></i></span>Unlimited</p>
+      <p class="t-wie">Odido <span>Unlimited Start</span></p>
+      <p class="t-prijs">€ 25,00<small>per maand</small></p>
+      <p class="t-gem">gemiddeld over 2 jaar</p>
+      <p class="t-noot">Geen actieprijs, let op: tot 20 Mbit/s</p>
+      <a class="go" href="https://www.odido.nl/mobiel-abonnement/sim-only" rel="nofollow noopener" target="_blank" data-aff="Odido">Bekijk bij Odido →</a>
+      <a class="t-meer" href="sim-only.html#unlimited">Alle unlimited-bundels</a>
     </div>
   </div>
 
@@ -193,7 +238,8 @@ td.prov{font-weight:600}
     <div class="kaartje winnaar">
       <p class="plek">Goedkoopste unlimited</p>
       <h3>Odido <span>Unlimited Start</span></h3>
-      <p class="prijs">€ 25,00<small> per maand, gemiddeld over 2 jaar</small></p>
+      <p class="prijs">€ 25,00<small> per maand</small></p>
+      <p class="gem">gemiddeld over 2 jaar</p>
       <p class="na">Geen actieprijs: dit betaal je vanaf de eerste maand</p>
       <p class="wat">Onbeperkt internet · onbeperkt bellen · tot 20 Mbit/s · Odido-netwerk</p>
       <p class="waarom">De laagste prijs voor onbeperkt internet én onbeperkt bellen, zonder actie die afloopt. Let op de snelheid: tot 20 Mbit/s, volgens Odido voor standaard app-gebruik.</p>
@@ -202,7 +248,8 @@ td.prov{font-weight:600}
     <div class="kaartje">
       <p class="plek">Sneller, nog steeds voordelig</p>
       <h3>KPN <span>Unlimited50</span></h3>
-      <p class="prijs">€ 28,00<small> per maand, gemiddeld over 2 jaar</small></p>
+      <p class="prijs">€ 28,00<small> per maand</small></p>
+      <p class="gem">gemiddeld over 2 jaar</p>
       <p class="na">Geen actieprijs: dit betaal je vanaf de eerste maand</p>
       <p class="wat">Onbeperkt internet · onbeperkt bellen · tot 50 Mbit/s · KPN-netwerk</p>
       <p class="waarom">Twee en een halve keer zo snel als de goedkoopste, voor € 3 per maand meer. Volgens KPN blijft de prijs ook na 24 maanden € 28.</p>
@@ -211,7 +258,8 @@ td.prov{font-weight:600}
     <div class="kaartje">
       <p class="plek">Goedkoopste snelle unlimited</p>
       <h3>Odido <span>Unlimited Basis</span></h3>
-      <p class="prijs">€ 32,50<small> per maand, gemiddeld over 2 jaar</small></p>
+      <p class="prijs">€ 32,50<small> per maand</small></p>
+      <p class="gem">gemiddeld over 2 jaar</p>
       <p class="na">Nu € 30,00 (actie, einddatum niet vermeld), normaal € 32,50</p>
       <p class="wat">Onbeperkt internet · onbeperkt bellen · tot 400 Mbit/s · Odido-netwerk</p>
       <p class="waarom">Tot 400 Mbit/s voor wie veel streamt of downloadt. De Black Friday-prijs geldt tijdelijk; normaal betaal je € 32,50.</p>
@@ -305,7 +353,8 @@ td.prov{font-weight:600}
     <div class="kaartje winnaar">
       <p class="plek">Goedkoopste</p>
       <h3>50+ Mobiel <span>10 GB</span></h3>
-      <p class="prijs">€ 5,00<small> per maand, gemiddeld over 2 jaar</small></p>
+      <p class="prijs">€ 5,00<small> per maand</small></p>
+      <p class="gem">gemiddeld over 2 jaar</p>
       <p class="na">Eerste 12 maanden € 2,50, daarna € 7,50</p>
       <p class="wat">10 GB internet · onbeperkt bellen · tot 350 Mbit/s · Vodafone-netwerk</p>
       <p class="waarom">Snelheid tot 350 Mbit/s.</p>
@@ -314,7 +363,8 @@ td.prov{font-weight:600}
     <div class="kaartje">
       <p class="plek">Nummer 2</p>
       <h3>Simpel <span>10 GB</span></h3>
-      <p class="prijs">€ 5,00<small> per maand, gemiddeld over 2 jaar</small></p>
+      <p class="prijs">€ 5,00<small> per maand</small></p>
+      <p class="gem">gemiddeld over 2 jaar</p>
       <p class="na">Eerste 12 maanden € 2,50, daarna € 7,50</p>
       <p class="wat">10 GB internet · 250 min bellen · tot 150 Mbit/s · Odido-netwerk</p>
       <p class="waarom">Let op: 250 min bellen. Snelheid tot 150 Mbit/s.</p>
@@ -323,7 +373,8 @@ td.prov{font-weight:600}
     <div class="kaartje">
       <p class="plek">Nummer 3</p>
       <h3>Youfone <span>10 GB</span></h3>
-      <p class="prijs">€ 6,00<small> per maand, gemiddeld over 2 jaar</small></p>
+      <p class="prijs">€ 6,00<small> per maand</small></p>
+      <p class="gem">gemiddeld over 2 jaar</p>
       <p class="na">Eerste 9 maanden € 1,00, daarna € 9,00</p>
       <p class="wat">10 GB internet · onbeperkt bellen · KPN-netwerk</p>
       <p class="waarom"></p>
@@ -425,7 +476,8 @@ td.prov{font-weight:600}
     <div class="kaartje winnaar">
       <p class="plek">Goedkoopste</p>
       <h3>50+ Mobiel <span>25 GB</span></h3>
-      <p class="prijs">€ 5,75<small> per maand, gemiddeld over 2 jaar</small></p>
+      <p class="prijs">€ 5,75<small> per maand</small></p>
+      <p class="gem">gemiddeld over 2 jaar</p>
       <p class="na">Eerste 12 maanden € 2,50, daarna € 9,00</p>
       <p class="wat">25 GB internet · onbeperkt bellen · tot 350 Mbit/s · Vodafone-netwerk</p>
       <p class="waarom">Snelheid tot 350 Mbit/s.</p>
@@ -434,7 +486,8 @@ td.prov{font-weight:600}
     <div class="kaartje">
       <p class="plek">Nummer 2</p>
       <h3>Simpel <span>18 GB</span></h3>
-      <p class="prijs">€ 5,75<small> per maand, gemiddeld over 2 jaar</small></p>
+      <p class="prijs">€ 5,75<small> per maand</small></p>
+      <p class="gem">gemiddeld over 2 jaar</p>
       <p class="na">Eerste 12 maanden € 2,50, daarna € 9,00</p>
       <p class="wat">18 GB internet · 250 min bellen · tot 150 Mbit/s · Odido-netwerk</p>
       <p class="waarom">Let op: 250 min bellen. Snelheid tot 150 Mbit/s.</p>
@@ -443,7 +496,8 @@ td.prov{font-weight:600}
     <div class="kaartje">
       <p class="plek">Nummer 3</p>
       <h3>hollandsnieuwe <span>20 GB</span></h3>
-      <p class="prijs">€ 6,75<small> per maand, gemiddeld over 2 jaar</small></p>
+      <p class="prijs">€ 6,75<small> per maand</small></p>
+      <p class="gem">gemiddeld over 2 jaar</p>
       <p class="na">Eerste 12 maanden € 4,50, daarna € 9,00</p>
       <p class="wat">20 GB internet · onbeperkt bellen · tot 350 Mbit/s · Vodafone-netwerk</p>
       <p class="waarom">Snelheid tot 350 Mbit/s.</p>
@@ -545,7 +599,8 @@ td.prov{font-weight:600}
     <div class="kaartje winnaar">
       <p class="plek">Goedkoopste</p>
       <h3>Simpel <span>40 GB</span></h3>
-      <p class="prijs">€ 6,75<small> per maand, gemiddeld over 2 jaar</small></p>
+      <p class="prijs">€ 6,75<small> per maand</small></p>
+      <p class="gem">gemiddeld over 2 jaar</p>
       <p class="na">Eerste 12 maanden € 2,50, daarna € 11,00</p>
       <p class="wat">40 GB internet · onbeperkt bellen · tot 150 Mbit/s · Odido-netwerk</p>
       <p class="waarom">Snelheid tot 150 Mbit/s.</p>
@@ -554,7 +609,8 @@ td.prov{font-weight:600}
     <div class="kaartje">
       <p class="plek">Nummer 2</p>
       <h3>50+ Mobiel <span>40 GB (nu 55 GB)</span></h3>
-      <p class="prijs">€ 6,75<small> per maand, gemiddeld over 2 jaar</small></p>
+      <p class="prijs">€ 6,75<small> per maand</small></p>
+      <p class="gem">gemiddeld over 2 jaar</p>
       <p class="na">Eerste 12 maanden € 2,50, daarna € 11,00</p>
       <p class="wat">40 GB internet · onbeperkt bellen · tot 350 Mbit/s · Vodafone-netwerk</p>
       <p class="waarom">Snelheid tot 350 Mbit/s.</p>
@@ -563,7 +619,8 @@ td.prov{font-weight:600}
     <div class="kaartje">
       <p class="plek">Nummer 3</p>
       <h3>hollandsnieuwe <span>40 GB</span></h3>
-      <p class="prijs">€ 8,25<small> per maand, gemiddeld over 2 jaar</small></p>
+      <p class="prijs">€ 8,25<small> per maand</small></p>
+      <p class="gem">gemiddeld over 2 jaar</p>
       <p class="na">Eerste 12 maanden € 4,50, daarna € 12,00</p>
       <p class="wat">40 GB internet · onbeperkt bellen · tot 350 Mbit/s · Vodafone-netwerk</p>
       <p class="waarom">Snelheid tot 350 Mbit/s.</p>
