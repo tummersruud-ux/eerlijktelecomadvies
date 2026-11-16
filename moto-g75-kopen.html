@@ -187,6 +187,14 @@ td.prov{font-weight:600}
 .tweejaar span{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:4px}
 .uitgelicht .tweejaar{margin:14px 0}
 a.simlink{display:block;margin-top:12px;font-weight:600;font-size:14.5px;color:var(--signal)}
+/* productfoto's van bol (16-11-2026) */
+.foto{margin:0 0 12px;text-align:center}
+.foto img{display:block;margin:0 auto;height:170px;width:auto;max-width:100%;object-fit:contain}
+.foto figcaption{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);margin-top:4px}
+.foto.klein img{height:120px}
+.uitgelicht .foto.links{float:right;margin:0 0 10px 16px}
+.uitgelicht .foto.links img{height:140px}
+@media (max-width:560px){.uitgelicht .foto.links{float:none;margin:0 0 10px}}
 .lader-noot{font-size:13.5px;color:var(--ink-soft);margin:8px 0 0}
 .lader-noot a{color:var(--signal);font-weight:600}
 .kaartje.lader .wat{flex:1}
@@ -201,9 +209,14 @@ a.simlink{display:block;margin-top:12px;font-weight:600;font-size:14.5px;color:v
 .a-prijs{font-family:var(--mono);font-size:34px;font-weight:600;margin:8px 0 12px;line-height:1.1}
 .a-prijs small{display:block;font-family:var(--body);font-size:14px;font-weight:500;color:var(--ink-soft);margin-top:4px}
 .toestel-blok{max-width:620px}
+.antwoord.met-foto{display:grid;grid-template-columns:150px 1fr;column-gap:18px;align-items:center}
+.antwoord.met-foto .a-foto{grid-row:1 / span 4;margin:0}
+.antwoord.met-foto .a-foto img{height:180px}
+@media (max-width:560px){.antwoord.met-foto{grid-template-columns:1fr}.antwoord.met-foto .a-foto{grid-row:auto;margin-bottom:10px}}
 .kaartjes.laders.een{grid-template-columns:minmax(0,560px)}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Moto G75 256 GB", "brand": {"@type": "Brand", "name": "Motorola"}, "offers": {"@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "296.69", "highPrice": "329.70", "offerCount": 3}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Waar is de Moto G75 (256 GB) het goedkoopst?", "acceptedAnswer": {"@type": "Answer", "text": "Van de winkels die wij nakijken (Amazon, bol, MediaMarkt, Coolblue) was de Moto G75 met 256 GB op 15 november 2026 nieuw het goedkoopst bij Amazon: € 296,69 inclusief btw. Prijzen veranderen vaak; wij kijken ze elke 2 weken opnieuw na."}}, {"@type": "Question", "name": "Wat vinden de testsites van de Moto G75?", "acceptedAnswer": {"@type": "Answer", "text": "Wij testen zelf niet. Tweakers: de beste telefoon tot € 200: 256 GB opslag plus een plek voor een geheugenkaart, waterdicht (IP68), draadloos opladen, een goede hoofdcamera voor de prijs en beveiligingsupdates tot eind 2030. Minpunt: geen oled-scherm, dus minder contrast."}}]}</script>
 </head>
 <body>
 
@@ -229,6 +242,7 @@ a.simlink{display:block;margin-top:12px;font-weight:600;font-size:14.5px;color:v
   <p class="meta">Prijzen bij Coolblue, bol, MediaMarkt en Amazon op 15 november 2026 · nieuw, 256 GB · incl. btw</p>
 
   <div class="antwoord">
+    
     <p class="a-kop">Goedkoopst van de 4 winkels die wij nakijken</p>
     <p class="a-prijs">€ 296,69<small>bij Amazon, op 15 november 2026</small></p>
     <a class="go groot" href="https://www.amazon.nl/dp/B0DJH59LHV?tag=eerlijkteleco-21" rel="sponsored nofollow noopener" target="_blank" data-aff="Amazon">Bekijk bij Amazon →</a><span class="aff">affiliate link</span>

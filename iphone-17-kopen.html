@@ -187,6 +187,14 @@ td.prov{font-weight:600}
 .tweejaar span{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:4px}
 .uitgelicht .tweejaar{margin:14px 0}
 a.simlink{display:block;margin-top:12px;font-weight:600;font-size:14.5px;color:var(--signal)}
+/* productfoto's van bol (16-11-2026) */
+.foto{margin:0 0 12px;text-align:center}
+.foto img{display:block;margin:0 auto;height:170px;width:auto;max-width:100%;object-fit:contain}
+.foto figcaption{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);margin-top:4px}
+.foto.klein img{height:120px}
+.uitgelicht .foto.links{float:right;margin:0 0 10px 16px}
+.uitgelicht .foto.links img{height:140px}
+@media (max-width:560px){.uitgelicht .foto.links{float:none;margin:0 0 10px}}
 .lader-noot{font-size:13.5px;color:var(--ink-soft);margin:8px 0 0}
 .lader-noot a{color:var(--signal);font-weight:600}
 .kaartje.lader .wat{flex:1}
@@ -201,9 +209,14 @@ a.simlink{display:block;margin-top:12px;font-weight:600;font-size:14.5px;color:v
 .a-prijs{font-family:var(--mono);font-size:34px;font-weight:600;margin:8px 0 12px;line-height:1.1}
 .a-prijs small{display:block;font-family:var(--body);font-size:14px;font-weight:500;color:var(--ink-soft);margin-top:4px}
 .toestel-blok{max-width:620px}
+.antwoord.met-foto{display:grid;grid-template-columns:150px 1fr;column-gap:18px;align-items:center}
+.antwoord.met-foto .a-foto{grid-row:1 / span 4;margin:0}
+.antwoord.met-foto .a-foto img{height:180px}
+@media (max-width:560px){.antwoord.met-foto{grid-template-columns:1fr}.antwoord.met-foto .a-foto{grid-row:auto;margin-bottom:10px}}
 .kaartjes.laders.een{grid-template-columns:minmax(0,560px)}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "iPhone 17 256 GB", "brand": {"@type": "Brand", "name": "Apple"}, "offers": {"@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "947.00", "highPrice": "1039.00", "offerCount": 4}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Waar is de iPhone 17 (256 GB) het goedkoopst?", "acceptedAnswer": {"@type": "Answer", "text": "Van de winkels die wij nakijken (bol, MediaMarkt, Amazon, Coolblue) was de iPhone 17 met 256 GB op 15 november 2026 nieuw het goedkoopst bij bol: € 947 inclusief btw. Prijzen veranderen vaak; wij kijken ze elke 2 weken opnieuw na."}}, {"@type": "Question", "name": "Zit er een oplader bij de iPhone 17?", "acceptedAnswer": {"@type": "Answer", "text": "Nee. Volgens Apple zit er alleen een kabel in de doos. Apple noemt hiervoor de Apple Dynamische Lichtnetadapter 40 W (piek 60 W); die was op 15 november 2026 het goedkoopst bij Amazon: € 44,95."}}, {"@type": "Question", "name": "Wat vinden de testsites van de iPhone 17?", "acceptedAnswer": {"@type": "Answer", "text": "Wij testen zelf niet. Tom's Guide: de beste goedkopere iPhone; Tweakers: voor de meeste mensen de interessantste iPhone in jaren: eindelijk een 120Hz-scherm, dezelfde groothoekcamera als de Pro-modellen en twee keer zoveel opslag. Een telecamera om in te zoomen ontbreekt."}}]}</script>
 </head>
 <body>
 
@@ -229,6 +242,7 @@ a.simlink{display:block;margin-top:12px;font-weight:600;font-size:14.5px;color:v
   <p class="meta">Prijzen bij Coolblue, bol, MediaMarkt en Amazon op 15 november 2026 · nieuw, 256 GB · incl. btw</p>
 
   <div class="antwoord">
+    
     <p class="a-kop">Goedkoopst van de 4 winkels die wij nakijken</p>
     <p class="a-prijs">€ 947<small>bij bol, op 15 november 2026</small></p>
     <a class="go groot" href="https://partner.bol.com/click/click?&amp;t=url&amp;s=1559809&amp;url=https%3A%2F%2Fwww.bol.com%2Fnl%2Fnl%2Fp%2Fapple-iphone-17-256gb-zwart%2F9300000240171936%2F&amp;f=txl&amp;subid=iphone-17&amp;name=iphone-17" rel="sponsored nofollow noopener" target="_blank" data-aff="bol">Bekijk bij bol →</a><span class="aff">affiliate link</span>
@@ -246,6 +260,7 @@ a.simlink{display:block;margin-top:12px;font-weight:600;font-size:14.5px;color:v
   <p><strong>Nee.</strong> Volgens Apple zit er alleen een kabel in de doos (<a href="https://www.apple.com/nl/iphone-17/specs/" rel="noopener" target="_blank">bron: Apple</a>). Een lader die je al hebt kan ook werken, maar dan laadt de telefoon mogelijk langzamer. Dit is de lader die Apple zelf noemt:</p>
   <div class="kaartjes laders een">
     <div class="kaartje lader" id="lader-apple">
+      
       <p class="plek">Voor iPhone 17 en iPhone 18 Pro Max</p>
       <h3>Apple Dynamische Lichtnetadapter 40 W (piek 60 W)</h3>
       <p class="prijs">€ 44,95<small> bij Amazon</small></p>
