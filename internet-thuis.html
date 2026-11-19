@@ -186,6 +186,8 @@ td.prov a.aanb:hover{color:var(--signal);border-bottom-color:var(--signal)}
 .kh-ico svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .kh-knoppen button strong{display:block;font-family:var(--display);font-size:18px;margin-top:10px;line-height:1.2}
 .kh-knoppen button > span:last-child{display:block;font-size:13.5px;color:var(--ink-soft);margin-top:4px;line-height:1.4}
+.kh-gb{display:inline-block;font-family:var(--display);font-weight:800;font-size:16px;color:var(--k);background:var(--kt);border-radius:999px;padding:3px 11px;margin-top:8px}
+.kh-knoppen button[aria-pressed="true"] .kh-gb{background:#fff}
 .kh-knoppen button[aria-pressed="true"]{border-color:var(--k);background:var(--kt)}
 .kh-knoppen button[aria-pressed="true"] .kh-ico{background:var(--k);color:#fff}
 .kh-bel button:hover{border-color:var(--signal)}
@@ -234,6 +236,9 @@ td.prov a.aanb:hover{color:var(--signal);border-bottom-color:var(--signal)}
 .kh-kvtekst{font-size:13.5px;color:#0B5E4B;background:#E8F6EF;border-radius:10px;padding:6px 10px;margin-top:8px}
 .kh-kvtekst a{color:inherit}
 .kh-kvlabel{display:inline-block;font-size:11.5px;font-weight:700;color:#fff;background:var(--signal);border-radius:999px;padding:2px 9px;margin-bottom:6px}
+
+/* Meerdere icoontjes naast elkaar (internet thuis, 19-11-2026) */
+.kh-icos{display:flex;gap:6px;flex-wrap:wrap}
 
 /* 18-11-2026: extra's in de rekenhulp, samen-advies */
 .kh-extra{font-size:14.5px}
@@ -368,9 +373,9 @@ footer{background:#1D2A35}
     <h2>Wat wil je thuis?</h2>
     <p class="kh-sub">Kies wat je nodig hebt. Je ziet meteen wat je in 2 jaar betaalt, de goedkoopste bovenaan.</p>
     <div class="kh-knoppen th-pk" role="group" aria-label="Wat wil je thuis?">
-      <button type="button" data-pk="i" aria-pressed="false" style="--k:#0F8A6C;--kt:#E2F3EC"><span class="kh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 9.5a12 12 0 0 1 17 0"/><path d="M6.5 12.7a7.5 7.5 0 0 1 11 0"/><path d="M9.5 15.8a3 3 0 0 1 5 0"/><circle cx="12" cy="18.6" r="1"/></svg></span><strong>Alleen internet</strong><span>Tv kijk je via apps als Netflix of NPO Start</span></button>
-      <button type="button" data-pk="it" aria-pressed="false" style="--k:#6A3FD0;--kt:#EEE7FB"><span class="kh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2.5"/><path d="M8.5 20.5h7M12 17v3.5"/></svg></span><strong>Internet en tv</strong><span>Met zenders, terugkijken en een tv-kastje of app</span></button>
-      <button type="button" data-pk="itb" aria-pressed="false" style="--k:#C2410C;--kt:#FFE9DA"><span class="kh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 3.8l2.6-.4 1.6 4-2 1.5a10 10 0 0 0 5.7 5.7l1.5-2 4 1.6-.4 2.6a2 2 0 0 1-2.1 1.7A15.5 15.5 0 0 1 4.9 5.9a2 2 0 0 1 1.7-2.1z"/></svg></span><strong>Internet, tv en bellen</strong><span>Ook een vaste telefoon thuis</span></button>
+      <button type="button" data-pk="i" aria-pressed="false" style="--k:#0F8A6C;--kt:#E2F3EC"><span class="kh-icos" aria-hidden="true"><span class="kh-ico"><svg viewBox="0 0 24 24"><path d="M3.5 9.5a12 12 0 0 1 17 0"/><path d="M6.5 12.7a7.5 7.5 0 0 1 11 0"/><path d="M9.5 15.8a3 3 0 0 1 5 0"/><circle cx="12" cy="18.6" r="1"/></svg></span></span><strong>Alleen internet</strong><span>Tv kijk je via apps als Netflix of NPO Start</span></button>
+      <button type="button" data-pk="it" aria-pressed="false" style="--k:#6A3FD0;--kt:#EEE7FB"><span class="kh-icos" aria-hidden="true"><span class="kh-ico"><svg viewBox="0 0 24 24"><path d="M3.5 9.5a12 12 0 0 1 17 0"/><path d="M6.5 12.7a7.5 7.5 0 0 1 11 0"/><path d="M9.5 15.8a3 3 0 0 1 5 0"/><circle cx="12" cy="18.6" r="1"/></svg></span><span class="kh-ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2.5"/><path d="M8.5 20.5h7M12 17v3.5"/></svg></span></span><strong>Internet en tv</strong><span>Met zenders, terugkijken en een tv-kastje of app</span></button>
+      <button type="button" data-pk="itb" aria-pressed="false" style="--k:#C2410C;--kt:#FFE9DA"><span class="kh-icos" aria-hidden="true"><span class="kh-ico"><svg viewBox="0 0 24 24"><path d="M3.5 9.5a12 12 0 0 1 17 0"/><path d="M6.5 12.7a7.5 7.5 0 0 1 11 0"/><path d="M9.5 15.8a3 3 0 0 1 5 0"/><circle cx="12" cy="18.6" r="1"/></svg></span><span class="kh-ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2.5"/><path d="M8.5 20.5h7M12 17v3.5"/></svg></span><span class="kh-ico"><svg viewBox="0 0 24 24"><path d="M6.6 3.8l2.6-.4 1.6 4-2 1.5a10 10 0 0 0 5.7 5.7l1.5-2 4 1.6-.4 2.6a2 2 0 0 1-2.1 1.7A15.5 15.5 0 0 1 4.9 5.9a2 2 0 0 1 1.7-2.1z"/></svg></span></span><strong>Internet, tv en bellen</strong><span>Ook een vaste telefoon thuis</span></button>
     </div>
     <div class="th-keus th-gebruik" role="group" aria-label="Hoe gebruiken jullie internet?"><p class="kh-kv-vraag">Hoe gebruiken jullie internet? <span>Dan kiezen wij de snelheid</span></p>
       <button type="button" data-g="licht" aria-pressed="false">Alleen of met z'n tweeën: internetten, mailen, series</button>

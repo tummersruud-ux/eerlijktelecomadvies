@@ -186,6 +186,8 @@ td.prov a.aanb:hover{color:var(--signal);border-bottom-color:var(--signal)}
 .kh-ico svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .kh-knoppen button strong{display:block;font-family:var(--display);font-size:18px;margin-top:10px;line-height:1.2}
 .kh-knoppen button > span:last-child{display:block;font-size:13.5px;color:var(--ink-soft);margin-top:4px;line-height:1.4}
+.kh-gb{display:inline-block;font-family:var(--display);font-weight:800;font-size:16px;color:var(--k);background:var(--kt);border-radius:999px;padding:3px 11px;margin-top:8px}
+.kh-knoppen button[aria-pressed="true"] .kh-gb{background:#fff}
 .kh-knoppen button[aria-pressed="true"]{border-color:var(--k);background:var(--kt)}
 .kh-knoppen button[aria-pressed="true"] .kh-ico{background:var(--k);color:#fff}
 .kh-bel button:hover{border-color:var(--signal)}
@@ -234,6 +236,9 @@ td.prov a.aanb:hover{color:var(--signal);border-bottom-color:var(--signal)}
 .kh-kvtekst{font-size:13.5px;color:#0B5E4B;background:#E8F6EF;border-radius:10px;padding:6px 10px;margin-top:8px}
 .kh-kvtekst a{color:inherit}
 .kh-kvlabel{display:inline-block;font-size:11.5px;font-weight:700;color:#fff;background:var(--signal);border-radius:999px;padding:2px 9px;margin-bottom:6px}
+
+/* Meerdere icoontjes naast elkaar (internet thuis, 19-11-2026) */
+.kh-icos{display:flex;gap:6px;flex-wrap:wrap}
 
 /* 18-11-2026: extra's in de rekenhulp, samen-advies */
 .kh-extra{font-size:14.5px}
@@ -398,10 +403,10 @@ footer{background:#1D2A35}
     <h2>Waar gebruik jij je telefoon vooral voor?</h2>
     <p class="kh-sub">Kies wat het meest op jou lijkt. Je ziet meteen wat je in 2 jaar betaalt, de goedkoopste bovenaan.</p>
     <div class="kh-knoppen" role="group" aria-label="Hoeveel internet heb je nodig?">
-      <button type="button" data-groep="weinig" aria-pressed="false" style="--k:#0F8A6C;--kt:#E2F3EC"><span class="kh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5.5h14a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 3.5V16.5H5A1.5 1.5 0 0 1 3.5 15V7A1.5 1.5 0 0 1 5 5.5z"/><path d="M8 10h8M8 13h5"/></svg></span><strong>Appen en bellen</strong><span>WhatsApp, mail en af en toe iets opzoeken · rond 10 GB</span></button>
-      <button type="button" data-groep="gemiddeld" aria-pressed="false" style="--k:#C2410C;--kt:#FFE9DA"><span class="kh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18V6.5l10-2.2v11.5"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="15.8" r="2.5"/></svg></span><strong>Social en muziek</strong><span>Instagram, TikTok en muziek onderweg · 20 tot 30 GB</span></button>
-      <button type="button" data-groep="veel" aria-pressed="false" style="--k:#6A3FD0;--kt:#EEE7FB"><span class="kh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10.5 9.2l4.3 2.8-4.3 2.8z"/></svg></span><strong>Video onderweg</strong><span>YouTube, series, of je laptop via je telefoon · 40 GB of meer</span></button>
-      <button type="button" data-groep="unlimited" aria-pressed="false" style="--k:#B07F00;--kt:#FFF4D6"><span class="kh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 9C5.2 9 3.8 10.3 3.8 12s1.4 3 3.4 3c3.2 0 6.4-6 9.6-6 2 0 3.4 1.3 3.4 3s-1.4 3-3.4 3c-3.2 0-6.4-6-9.6-6z"/></svg></span><strong>Geen zorgen meer</strong><span>Onbeperkt internet: nooit meer op je data letten</span></button>
+      <button type="button" data-groep="weinig" aria-pressed="false" style="--k:#0F8A6C;--kt:#E2F3EC"><span class="kh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5.5h14a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 3.5V16.5H5A1.5 1.5 0 0 1 3.5 15V7A1.5 1.5 0 0 1 5 5.5z"/><path d="M8 10h8M8 13h5"/></svg></span><strong>Appen en bellen</strong><b class="kh-gb">Rond 10 GB</b><span>WhatsApp, mail en af en toe iets opzoeken</span></button>
+      <button type="button" data-groep="gemiddeld" aria-pressed="false" style="--k:#C2410C;--kt:#FFE9DA"><span class="kh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18V6.5l10-2.2v11.5"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="15.8" r="2.5"/></svg></span><strong>Social en muziek</strong><b class="kh-gb">20 tot 30 GB</b><span>Instagram, TikTok en muziek onderweg</span></button>
+      <button type="button" data-groep="veel" aria-pressed="false" style="--k:#6A3FD0;--kt:#EEE7FB"><span class="kh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10.5 9.2l4.3 2.8-4.3 2.8z"/></svg></span><strong>Video onderweg</strong><b class="kh-gb">40 GB of meer</b><span>YouTube, series, of je laptop via je telefoon</span></button>
+      <button type="button" data-groep="unlimited" aria-pressed="false" style="--k:#B07F00;--kt:#FFF4D6"><span class="kh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 9C5.2 9 3.8 10.3 3.8 12s1.4 3 3.4 3c3.2 0 6.4-6 9.6-6 2 0 3.4 1.3 3.4 3s-1.4 3-3.4 3c-3.2 0-6.4-6-9.6-6z"/></svg></span><strong>Geen zorgen meer</strong><b class="kh-gb">Onbeperkt internet</b><span>Nooit meer op je data letten</span></button>
     </div>
     <div class="kh-bel" role="group" aria-label="Bel je veel?">Bel je veel?
       <button type="button" data-bel="ja" aria-pressed="true">Ja, onbeperkt bellen</button>
