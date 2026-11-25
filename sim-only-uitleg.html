@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sim only uitgelegd: snelheid, buitenland, looptijd en dataplafond — Eerlijk Telecomadvies</title>
+<meta name="description" content="Hoeveel Mbit/s heb je nodig, waarom is onbeperkt in de EU niet onbeperkt, hoe werkt opzeggen en wat doet een dataplafond? Uitleg in gewone woorden, met de regels van de EU en de ACM.">
+<link rel="canonical" href="https://eerlijktelecomadvies.nl/sim-only-uitleg.html">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<style>
+/* Lettertypen op de eigen site (geen verbinding met Google): Bricolage Grotesque, IBM Plex Sans en IBM Plex Mono, licentie SIL Open Font License 1.1 (zie fonts/LEESMIJ.txt). */
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-weight: 500; font-stretch: 100%; font-display: swap; src: url(fonts/bricolage-grotesque-latin-ext-1.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-weight: 500; font-stretch: 100%; font-display: swap; src: url(fonts/bricolage-grotesque-latin-2.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-weight: 700; font-stretch: 100%; font-display: swap; src: url(fonts/bricolage-grotesque-latin-ext-1.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-weight: 700; font-stretch: 100%; font-display: swap; src: url(fonts/bricolage-grotesque-latin-2.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-weight: 800; font-stretch: 100%; font-display: swap; src: url(fonts/bricolage-grotesque-latin-ext-1.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-weight: 800; font-stretch: 100%; font-display: swap; src: url(fonts/bricolage-grotesque-latin-2.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/ibm-plex-mono-latin-ext-3.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/ibm-plex-mono-latin-4.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 600; font-display: swap; src: url(fonts/ibm-plex-mono-latin-ext-5.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 600; font-display: swap; src: url(fonts/ibm-plex-mono-latin-6.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 400; font-stretch: 100%; font-display: swap; src: url(fonts/ibm-plex-sans-latin-ext-7.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 400; font-stretch: 100%; font-display: swap; src: url(fonts/ibm-plex-sans-latin-8.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 500; font-stretch: 100%; font-display: swap; src: url(fonts/ibm-plex-sans-latin-ext-7.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 500; font-stretch: 100%; font-display: swap; src: url(fonts/ibm-plex-sans-latin-8.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 600; font-stretch: 100%; font-display: swap; src: url(fonts/ibm-plex-sans-latin-ext-7.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 600; font-stretch: 100%; font-display: swap; src: url(fonts/ibm-plex-sans-latin-8.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+:root{
+  --ink:#16212B; --ink-soft:#5A6B77; --paper:#EFF1EC; --card:#FFFFFF;
+  --signal:#0B6E5B; --signal-tint:#E2F0EA; --flag:#A63B22; --flag-tint:#F7E9E4;
+  --line:#D6DAD2;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:2px}
+
+.buildnote{background:#FFF3C4;border-bottom:1px solid #E5D08A;font-size:14px;padding:10px 0;color:#5A4A12}
+
+.top{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.top .wrap{display:flex;align-items:center;gap:26px;height:66px}
+.mark{display:flex;align-items:center;gap:9px;font-family:var(--display);font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none}
+.bars{display:flex;align-items:flex-end;gap:2px;height:16px}
+.bars i{display:block;width:3px;background:var(--signal);border-radius:1px}
+.bars i:nth-child(1){height:5px}.bars i:nth-child(2){height:9px}
+.bars i:nth-child(3){height:13px}.bars i:nth-child(4){height:16px}
+.mark span{color:#8FA3AF;font-weight:500}
+.nav{margin-left:auto;display:flex;gap:22px;font-size:15px}
+.nav a{text-decoration:none;color:#C6D2D9;padding:4px 0;border-bottom:2px solid transparent}
+.nav a:hover{color:#fff;border-bottom-color:var(--signal)}
+
+/* artikel */
+.artikel{max-width:720px;margin:0 auto;padding:54px 22px 20px}
+.kruimel{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:22px}
+.kruimel a{text-decoration:none;color:var(--signal);font-weight:600}
+.artikel h1{font-family:var(--display);font-size:clamp(32px,5vw,46px);line-height:1.08;letter-spacing:-.032em;font-weight:800}
+.meta{font-family:var(--mono);font-size:13px;color:var(--ink-soft);margin-top:20px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.intro{font-size:19.5px;color:var(--ink-soft);margin-top:28px;line-height:1.55}
+.artikel h2{font-family:var(--display);font-size:26px;letter-spacing:-.02em;font-weight:700;margin-top:44px;margin-bottom:14px}
+.artikel h3{font-family:var(--display);font-size:19px;letter-spacing:-.015em;font-weight:700;margin-top:30px;margin-bottom:8px}
+.artikel p{margin-top:16px}
+.artikel ul{margin-top:16px;padding-left:22px}
+.artikel li{margin-top:9px}
+.artikel strong{font-weight:600}
+
+.uitgelicht{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--signal);padding:22px 24px;margin-top:32px}
+.uitgelicht h3{margin-top:0;font-size:17.5px}
+.uitgelicht p{margin-top:8px;font-size:15.5px;color:var(--ink-soft)}
+
+.check{background:var(--flag-tint);border:1px solid #E0C4BA;padding:18px 20px;margin-top:30px;font-size:15px}
+.check strong{color:var(--flag)}
+
+.cta{background:var(--ink);color:#fff;padding:26px 26px 24px;margin-top:40px}
+.cta h3{font-family:var(--display);font-size:20px;margin:0 0 8px;letter-spacing:-.015em}
+.cta p{color:#9DB0BC;font-size:15px;margin-top:6px}
+.cta a.go{display:inline-block;margin-top:16px;background:var(--signal);color:#fff;text-decoration:none;padding:11px 18px;border-radius:2px;font-weight:600;font-size:15px}
+.cta a.go:hover{background:#0d8770}
+.cta .aff{font-family:var(--mono);font-size:11.5px;color:#8FA3AF;display:block;margin-top:10px}
+
+.tablewrap{background:var(--card);border:1px solid var(--line);overflow-x:auto;margin-top:24px}
+table{width:100%;border-collapse:collapse;min-width:460px}
+th{text-align:left;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;padding:13px 16px;border-bottom:1px solid var(--line)}
+td{padding:13px 16px;border-bottom:1px solid var(--line);font-size:15.5px}
+tbody tr:last-child td{border-bottom:none}
+.ja{color:var(--signal);font-weight:600}
+.leeg{font-family:var(--mono);color:var(--flag);background:var(--flag-tint);padding:2px 7px;font-size:13px;border-radius:2px}
+
+footer{background:#0E1720;color:#8FA3AF;font-size:14px;padding:42px 0 34px;margin-top:60px}
+.disc{background:rgba(11,110,91,.14);border-left:3px solid var(--signal);padding:16px 18px;margin-bottom:26px;color:#C6D2D9;max-width:74ch;line-height:1.55}
+.fbot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;border-top:1px solid #22303B;padding-top:20px}
+.fbot a{color:#8FA3AF}
+
+@media (max-width:820px){.top .wrap{height:auto;flex-wrap:wrap;gap:4px 18px;padding-top:12px;padding-bottom:10px}.nav{margin-left:0;width:100%;gap:18px;font-size:14.5px}.artikel{padding-top:36px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* vergelijking (gemaakt door _bouw/maak.py) */
+/* tegels bovenaan (nieuw ontwerp 15-11-2026, dezelfde als op de homepage) */
+.sim{display:block;margin:0 auto 12px;max-width:100%;width:auto}
+td.prov{min-width:150px}
+td.prov .netwerk{white-space:nowrap}
+td.prov .sim.mini{display:block;margin:8px 0 0;height:46px;width:auto}
+.tegels{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.tegel{background:var(--card);color:var(--ink);border-radius:10px;padding:18px 18px 16px;display:flex;flex-direction:column;box-shadow:0 8px 26px rgba(22,33,43,.10);border-top:4px solid var(--signal);transition:transform .15s ease,box-shadow .15s ease}
+.tegel:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(22,33,43,.16)}
+.t-kop{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--signal);font-weight:600;margin:0}
+.sig{display:inline-flex;align-items:flex-end;gap:2px;height:14px}
+.sig i{display:block;width:4px;border-radius:1px;background:var(--line)}
+.sig i:nth-child(1){height:5px}.sig i:nth-child(2){height:8px}.sig i:nth-child(3){height:11px}.sig i:nth-child(4){height:14px}
+.sig i.aan{background:var(--signal)}
+.t-wie{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.02em;margin:10px 0 0;line-height:1.15}
+.t-wie span{display:block;font-family:var(--body);font-weight:500;font-size:14px;color:var(--ink-soft);letter-spacing:0}
+.t-prijs{font-family:var(--mono);font-weight:600;font-size:32px;letter-spacing:-.02em;margin:12px 0 0;line-height:1}
+.t-prijs small{font-size:13px;font-weight:400;color:var(--ink-soft);margin-left:6px;letter-spacing:0}
+.t-prijs small{display:block;margin:6px 0 0}
+.t-gem{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal);font-weight:600;margin:6px 0 0}
+.tegel.tel .t-gem{text-transform:none;letter-spacing:0;font-family:var(--body);font-weight:600;font-size:13.5px;color:var(--ink)}
+.t-noot{font-size:13.5px;color:var(--ink-soft);margin:8px 0 0;line-height:1.45;flex:1}
+.tegel a.go{display:block;text-align:center;margin-top:14px;padding:12px 8px;font-size:14px}
+.t-meer{display:block;text-align:center;font-size:13px;color:var(--ink-soft);margin-top:9px}
+.t-meer:hover{color:var(--signal)}
+.t-datum{font-size:13px;color:var(--ink-soft);margin:12px 0 0}
+@media (max-width:900px){.tegels{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.tegels{grid-template-columns:1fr}.t-prijs{font-size:30px}}
+@media (prefers-reduced-motion:reduce){.tegel:hover{transform:none}}
+.artikel.breed{max-width:980px}
+.kaartjes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:26px}
+.kaartje{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 20px 18px;display:flex;flex-direction:column;box-shadow:0 4px 16px rgba(22,33,43,.05)}
+.kaartje.winnaar{border:2px solid var(--signal);border-top-width:5px;box-shadow:0 10px 28px rgba(11,110,91,.16)}
+.kaartje .plek{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--signal);font-weight:600;margin:0}
+.kaartje h3{font-family:var(--display);font-size:22px;margin:6px 0 0;letter-spacing:-.015em}
+.kaartje h3 span{font-family:var(--body);font-weight:500;font-size:15px;color:var(--ink-soft);display:block}
+.kaartje .prijs{font-family:var(--mono);font-size:30px;font-weight:600;margin:12px 0 0;color:var(--ink)}
+.kaartje .prijs small{font-size:13px;color:var(--ink-soft);font-weight:400}
+.kaartje .gem{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--signal);font-weight:600;margin:0}
+.kaartje .na{font-size:13.5px;color:var(--ink-soft);margin:6px 0 0}
+.kaartje .wat{font-size:14.5px;margin:10px 0 0}
+.kaartje .waarom{font-size:14.5px;color:var(--ink-soft);margin:8px 0 14px;flex:1}
+a.go{display:inline-block;background:var(--signal);color:#fff;text-decoration:none;padding:10px 14px;border-radius:6px;font-weight:600;font-size:14.5px;text-align:center}
+a.go:hover{background:#0d8770}
+a.go.groot{display:block;padding:14px 16px;font-size:16.5px}
+.naar{display:block;font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-top:5px}
+.kaartje .naar{text-align:center}
+.aff{display:block;font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-top:5px}
+.tegel .aff,.kaartje .aff{text-align:center}
+.tablewrap{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow-x:auto;margin-top:22px}
+table{width:100%;border-collapse:collapse;min-width:760px}
+th{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;padding:12px 12px;border-bottom:1px solid var(--line)}
+td{padding:12px 12px;border-bottom:1px solid var(--line);font-size:15px;vertical-align:top}
+td.num{font-family:var(--mono);white-space:nowrap}
+.netwerk{display:block;font-size:12px;color:var(--ink-soft);font-family:var(--body)}
+th .netwerk{text-transform:none;letter-spacing:0;font-weight:400;margin-top:3px}
+td.prov{font-weight:600}
+td.prov a.aanb{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-soft)}
+td.prov a.aanb:hover{color:var(--signal);border-bottom-color:var(--signal)}
+.springen{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.springen a{background:var(--card);border:1px solid var(--line);padding:9px 14px;text-decoration:none;font-weight:600;font-size:14.5px}
+.springen a:hover{border-color:var(--signal)}
+.uitleg-kort{font-size:14px;color:var(--ink-soft);margin-top:12px}
+.bf-link{margin:16px 0 0;font-weight:600}
+.bf-link a{color:var(--signal)}
+.snel{background:var(--card);border:2px solid var(--signal);margin-top:18px}
+.snel .rij{display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.snel .rij:last-child{border-bottom:none}
+.snel .wie{flex:1;font-size:15px;line-height:1.35}
+.snel .wie strong{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal)}
+.snel .bedrag{font-family:var(--mono);font-weight:600;white-space:nowrap}
+.snel a.go{white-space:nowrap}
+@media (max-width:820px){.kaartje .prijs{font-size:26px}}
+
+.ul-inhoud{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+.ul-inhoud a{background:#fff;border-radius:999px;padding:7px 14px;text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink);box-shadow:0 3px 10px rgba(22,33,43,.08)}
+.ul-kort{background:var(--signal-tint);border-radius:14px;padding:12px 16px;margin:8px 0 14px;font-size:1.03rem;line-height:1.55}
+.ul-blok p{line-height:1.6}
+.ul-tabel{width:100%;min-width:0;border-collapse:collapse;margin:10px 0 16px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(22,33,43,.06)}
+.ul-tabel th,.ul-tabel td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);font-size:.95rem;vertical-align:top}
+.ul-tabel tr:last-child td{border-bottom:0}
+.ul-tip{background:#FFF4D6;border-radius:12px;padding:10px 14px;margin:12px 0;line-height:1.55}
+.ul-lijst{margin:8px 0 14px;padding-left:20px;line-height:1.6}
+.ul-verder{margin:6px 0 0;font-weight:600}
+.ul-knoppen{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 10px}
+.ul-bronnen{font-size:.9rem;color:var(--ink-soft);line-height:1.6}
+/* AUTO:STIJL (gemaakt door _bouw/maak.py; vriendelijke stijl 17-11-2026) */
+:root{--paper:#FBF8F3;--ink:#1D2A35;--ink-soft:#5B6874;--signal:#0F8A6C;--signal-tint:#E2F3EC;--line:#ECE6DC;--zon:#FFD66B;--mono:"IBM Plex Sans","Segoe UI",system-ui,sans-serif}
+body{background:var(--paper)}
+.top{background:rgba(255,255,255,.96);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.mark span{color:var(--signal)}
+.nav a{color:var(--ink)}
+.nav a:hover{color:var(--signal);border-bottom-color:var(--signal)}
+@media (max-width:640px){.nav{flex-wrap:wrap;gap:2px 16px}.nav a{white-space:nowrap}}
+.eyebrow,.kruimel,.tag,.t-kop,.t-gem,.vb-kop,.w-kop,.a-kop,.n-kop span,.snel .wie strong,.kaartje .plek,.kaartje .gem,.kaartje.tel .kop,th,.nettabel th,.kies,.regel .nr{text-transform:none!important;letter-spacing:0!important}
+.num,td.num,.t-prijs,.kaartje .prijs,.a-prijs,.bedrag,.plekken .pl .nr,.vb-rij strong,.winkels strong,.tweejaar strong{font-variant-numeric:tabular-nums}
+.t-prijs,.kaartje .prijs,.a-prijs,.plekken .pl .nr{font-family:var(--display);font-weight:800}
+.go,.chooser a,.springen a,.cta a.go,.netlinks a{border-radius:999px!important}
+.chooser a{background:var(--signal)}
+.chooser a.ghost{background:transparent;color:var(--signal);border-color:var(--signal)}
+.tablewrap{border-radius:18px;border-color:var(--line);box-shadow:0 6px 22px rgba(29,42,53,.05)}
+.tegel,.kaartje,.kaart,.earn,.uitgelicht,.snel,.net,.check,.cta,.pl,.verdienen,.vb{border-radius:18px}
+.tegel,.kaartje{border-top-width:0;box-shadow:0 10px 30px rgba(29,42,53,.08)}
+.uitgelicht{border-left-width:1px;border-color:#D4ECE1;background:#F1F9F5}
+.cta{background:#F1F9F5;color:var(--ink);border:1px solid #D4ECE1}
+.cta p,.cta .aff{color:var(--ink-soft)}
+.hero{background:linear-gradient(180deg,#FFF5E8 0%,#F3FAF6 100%);color:var(--ink);padding:56px 0 54px}
+.hero h1{color:var(--ink);font-size:clamp(34px,4.2vw,52px)}
+.hero h1 em{color:var(--signal);background:linear-gradient(transparent 68%,rgba(255,214,107,.8) 68%)}
+.hero .eyebrow{font-size:14.5px;font-weight:600;color:var(--signal);background:#fff;border:1px solid #D4ECE1;display:inline-block;padding:7px 15px;border-radius:999px}
+.hero .lede{color:var(--ink-soft)}
+.hero-top{grid-template-columns:1fr 1.05fr;gap:56px}
+.foto-blok{position:relative;margin:0 0 110px}
+@media (min-width:1280px){.foto-blok{margin-left:70px;margin-right:-70px}}
+.foto-blok img{display:block;width:100%;height:430px;object-fit:cover;object-position:50% 35%;border-radius:28px;box-shadow:0 24px 60px rgba(29,42,53,.16)}
+.foto-blok figcaption,.paginakop figcaption{position:absolute;right:14px;top:10px;font-size:11px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.75)}
+.foto-blok .vb{position:absolute;left:-60px;bottom:-135px;width:calc(100% + 30px);max-width:600px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);column-gap:26px;align-items:center;background:#fff;border:none;border-radius:20px;box-shadow:0 18px 44px rgba(29,42,53,.18);padding:14px 20px 10px}
+.foto-blok .vb>.vb-kop{grid-column:1/-1;grid-row:1;margin-bottom:2px}
+.foto-blok .vb>.vb-wie{grid-column:1;grid-row:2}
+.foto-blok .vb>.vb-balk{grid-column:1;grid-row:3/5;align-self:end}
+.foto-blok .vb>.vb-as{grid-column:1;grid-row:5;align-self:start;margin-top:4px}
+.foto-blok .vb>.vb-rij:nth-child(5){grid-column:2;grid-row:2}
+.foto-blok .vb>.vb-rij:nth-child(6){grid-column:2;grid-row:3}
+.foto-blok .vb>.vb-rij:nth-child(7){grid-column:2;grid-row:4}
+.foto-blok .vb>.vb-rij:nth-child(8){grid-column:2;grid-row:5}
+.vb-kop{font-size:12.5px;color:var(--ink-soft)}
+.vb-wie{color:var(--ink);font-size:17px}
+.foto-blok .vb-balk{height:52px;margin-top:6px}
+.vb-balk{border-bottom-color:var(--line)}
+.vb-balk i.a,.stip.a{background:var(--signal)}
+.vb-balk i.n,.stip.n{background:#CBD4DA}
+.vb-lijn{border-top-color:#E0A800}
+.vb-lijn b{background:#fff;color:#9A6E00}
+.vb-as{color:var(--ink-soft)}
+.vb-rij{color:var(--ink-soft);border-bottom-color:var(--line);font-size:13.5px;padding:5px 0}
+.vb-rij strong{color:var(--ink)}
+.vb-rij.uit{color:var(--ink)}
+.vb-rij.uit strong{color:var(--signal);font-size:22px;font-family:var(--display)}
+.foto-blok .vb-noot{display:none}
+.kies{font-family:var(--display);font-size:26px;color:var(--ink);margin-top:78px;font-weight:700}
+.t-datum,.hero .t-datum{color:var(--ink-soft)}
+.vertrouwen{background:#fff;border-bottom:none}
+.werk{background:#EAF5EF;color:var(--ink)}
+.werk h2{color:var(--ink)}
+.werk .sec-note,.regel p{color:var(--ink-soft)}
+.n-kop{background:#F1F9F5;color:var(--ink)}
+.n-kop span{color:var(--signal)}
+.verdienen{background:#fff;border-color:var(--line);border-left-color:var(--signal)}
+.verdienen li{color:var(--ink-soft)}
+.verdienen .tick{background:var(--signal-tint);color:var(--signal)}
+.vb-los .vb{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 10px 30px rgba(29,42,53,.08)}
+.vb-los .vb-kop,.vb-los .vb-as,.vb-los .vb-noot{color:var(--ink-soft)}
+.vb-los .vb-balk i.a,.vb-los .stip.a{background:var(--signal)}
+.vb-los .vb-balk i.n,.vb-los .stip.n{background:#CBD4DA}
+.vb-los .vb-lijn{border-top-color:#E0A800}
+.vb-los .vb-lijn b{background:#fff;color:#9A6E00}
+.vb-los .vb-rij{border-top-color:var(--line)}
+.vb-los .vb-rij.uit strong{color:var(--signal)}
+.paginakop.met-foto{display:grid;grid-template-columns:1fr 330px;gap:36px;align-items:center}
+.paginakop figure{margin:0;position:relative}
+.paginakop img{display:block;width:100%;height:210px;object-fit:cover;border-radius:22px;box-shadow:0 14px 36px rgba(29,42,53,.14)}
+footer{background:#1D2A35}
+.letop{display:inline-block;font-size:12.5px;color:#8A5A00;background:#FFF4D6;padding:2px 8px;border-radius:8px;margin-top:6px}
+.t-noot .letop{display:block;width:fit-content}
+@media (max-width:820px){.hero-top{grid-template-columns:1fr;gap:26px}.foto-blok img{height:230px}.foto-blok{margin-bottom:0}.foto-blok .vb{position:relative;left:auto;bottom:auto;width:auto;max-width:none;display:block;margin:-48px 14px 0}.foto-blok .vb-balk{height:62px;margin-top:10px}.kies{margin-top:34px}.paginakop.met-foto{display:block}.paginakop figure{display:none}}
+/* Officiele logo's van aanbieders met een partnerprogramma (alleen uit hun bannerbibliotheek, 21-11-2026) */
+img.logo{display:block;width:auto;max-width:120px;object-fit:contain;margin:8px 0 4px;border-radius:4px}
+/* /AUTO:STIJL */
+</style>
+<!-- teller -->
+<script data-goatcounter="https://eerlijktelecomadvies.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a[data-aff]"):null;if(!a||!window.goatcounter||!window.goatcounter.count)return;var n=a.getAttribute("data-aff")||"link",p=location.pathname.replace(/^\/|\.html$/g,"")||"home";window.goatcounter.count({path:"klik/"+n.toLowerCase().replace(/[^a-z0-9]+/g,"-")+"/"+p,title:"Klik naar "+n+" op "+p,event:true});},true);</script>
+<!-- /teller -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hoeveel Mbit/s heb ik nodig op mijn telefoon?", "acceptedAnswer": {"@type": "Answer", "text": "Voor video in Full HD raden Netflix en YouTube 5 Mbit/s aan, voor 4K 15 tot 20 Mbit/s."}}, {"@type": "Question", "name": "Geldt mijn bundel in het Verenigd Koninkrijk en Zwitserland?", "acceptedAnswer": {"@type": "Answer", "text": "Niet volgens de EU-regels: die gelden in de EU, IJsland, Liechtenstein, Noorwegen, Oekraïne en Moldavië. Sommige aanbieders doen het Verenigd Koninkrijk en Zwitserland vrijwillig mee."}}, {"@type": "Question", "name": "Waarom krijg ik met onbeperkt minder internet in de EU?", "acceptedAnswer": {"@type": "Answer", "text": "Bij onbeperkt mag je aanbieder het internet in de EU begrenzen. Je krijgt minstens twee keer je maandprijs zonder btw gedeeld door € 1,10 (in 2026). Bij € 30 per maand is dat minstens 45 GB."}}, {"@type": "Question", "name": "Wanneer kan ik mijn sim only opzeggen?", "acceptedAnswer": {"@type": "Answer", "text": "Na de vaste looptijd van 1 of 2 jaar kun je altijd kosteloos opzeggen, met een opzegtermijn van hoogstens 1 maand. Een aanbieder mag je niet langer dan 2 jaar vasthouden."}}, {"@type": "Question", "name": "Wat is een dataplafond?", "acceptedAnswer": {"@type": "Answer", "text": "Een dataplafond zorgt dat je niet bijbetaalt als je bundel op is. Bij sommige aanbieders is het gratis of standaard aan, bij andere kost het € 0,50 tot € 1 per maand."}}]}</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="index.html" class="mark">
+      <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      eerlijk<span>telecomadvies</span>
+    </a>
+    <nav class="nav">
+      <a href="sim-only.html">Sim only</a>
+      <a href="verschillen-sim-only.html">Verschillen</a>
+      <a href="internet-thuis.html">Internet thuis</a>
+      <a href="telefoons.html">Telefoons</a>
+      <a href="index.html#werkwijze">Zo werken wij</a>
+    </nav>
+  </div>
+</header>
+
+<article class="artikel breed">
+  <div class="paginakop"><div>
+  <p class="kruimel"><a href="index.html">Home</a> › Sim only uitgelegd</p>
+
+  <h1>Sim only uitgelegd: waar let je op?</h1>
+
+  <p class="meta">Nagelezen op 25 november 2026 bij de EU, de ACM en de aanbieders zelf</p>
+  </div></div>
+
+
+  <p class="intro">Op de <a href="verschillen-sim-only.html">verschillenpagina</a> zie je per aanbieder wat je krijgt. Hier lees je wat het betekent: hoeveel snelheid je nodig hebt, wat de regels zijn in het buitenland, hoe opzeggen werkt en waarom een dataplafond handig is. Met de officiële bron erbij.</p>
+
+
+  <nav class="ul-inhoud" aria-label="Op deze pagina">
+    <a href="#snelheid">🚀 Snelheid</a><a href="#buitenland">✈️ Buitenland</a><a href="#looptijd">📅 Looptijd</a><a href="#dataplafond">🛑 Dataplafond</a><a href="#bellen">📞 Bellen</a><a href="#5g-esim">📶 5G en eSIM</a><a href="#netwerk">🗼 Netwerk</a>
+  </nav>
+
+  <section class="ul-blok">
+  <h2 id="snelheid">🚀 Snelheid: hoeveel Mbit/s heb je nodig?</h2>
+  <p class="ul-kort"><b>In het kort:</b> voor video in Full HD is 5 Mbit/s genoeg, voor 4K 15 tot 20 Mbit/s. Dat zeggen Netflix en YouTube zelf. Ook de traagste bundel op onze site (Odido Unlimited Start, tot 20 Mbit/s) is snel genoeg voor Full HD.</p>
+  <table class="ul-tabel">
+    <tr><th>Wat je doet</th><th>Aangeraden snelheid</th></tr>
+    <tr><td>YouTube in HD (720p)</td><td>2,5 Mbit/s</td></tr>
+    <tr><td>Netflix of YouTube in Full HD (1080p)</td><td>5 Mbit/s</td></tr>
+    <tr><td>Netflix in 4K</td><td>15 Mbit/s</td></tr>
+    <tr><td>YouTube in 4K</td><td>20 Mbit/s</td></tr>
+  </table>
+  <p><b>Wat betekent "tot"?</b> Aanbieders noemen de hoogste snelheid. Hoe snel het echt gaat, hangt af van waar je bent en hoe druk het is op het netwerk.</p>
+  <p><b>Wanneer helpt meer snelheid?</b> Vooral bij grote downloads, zoals app-updates of foto's naar de cloud, en als je je telefoon als hotspot voor je laptop gebruikt.</p>
+  <p><b>Onbeperkt, maar trager:</b> sommige onbeperkt-bundels gaan tot 20 of 25 Mbit/s. Dat is genoeg voor video op je telefoon, maar grote downloads duren langer.</p>
+  <p class="ul-verder"><a href="verschillen-sim-only.html#per-aanbieder">Snelheid per aanbieder →</a></p>
+  </section>
+
+  <section class="ul-blok">
+  <h2 id="buitenland">✈️ Buitenland: wat zijn de regels?</h2>
+  <p class="ul-kort"><b>In het kort:</b> in de EU, in IJsland, Liechtenstein en Noorwegen, en sinds 1 januari 2026 ook in Oekraïne en Moldavië, bel en internet je voor hetzelfde geld als thuis. Deze EU-regel geldt tot 2032. Het Verenigd Koninkrijk en Zwitserland horen er niet bij.</p>
+  <p><b>Verenigd Koninkrijk en Zwitserland:</b> geen EU-regel, maar sommige aanbieders doen ze toch mee. Op onze site doen Simyo en Youfone het Verenigd Koninkrijk en Zwitserland mee, en Odido Zwitserland bij de onbeperkt-bundels Plus en Snelst. Kijk voor je vertrek altijd bij je eigen aanbieder.</p>
+  <p><b>Even snel als thuis:</b> volgens de EU-regels krijg je in het buitenland dezelfde snelheid als thuis, als dat technisch kan.</p>
+  <p><b>Waarom is onbeperkt in de EU niet onbeperkt?</b> Bij een onbeperkt-bundel mag je aanbieder het internet in de EU begrenzen. De EU zegt hoeveel je minstens krijgt: twee keer je maandprijs zonder btw, gedeeld door € 1,10 (in 2026; vanaf 2027 € 1). Bij een onbeperkt-bundel van € 30 per maand is dat minstens 45 GB per maand. Op onze site krijg je met onbeperkt van <b>31 GB</b> (Budget Thuis) tot <b>100 GB</b> (Vodafone) per maand in de EU.</p>
+  <p><b>Ook bij een gewone bundel kan het minder zijn.</b> Kost een GB je minder dan € 1,10 zonder btw, dan mag je aanbieder in de EU een lagere grens zetten dan in Nederland. Bij 37 van de 40 bundels op onze site is dat zo. Je aanbieder moet het je vooraf vertellen. Op de <a href="verschillen-sim-only.html#per-aanbieder">verschillenpagina</a> zie je wat elke aanbieder zegt.</p>
+  <p><b>Meer gebruikt dan mag?</b> Dan mag je aanbieder per GB iets rekenen, maar in 2026 nooit meer dan € 1,10 zonder btw. Bij € 50 extra kosten (of een grens die je zelf kiest) moet je aanbieder je laten weten dat je niet verder kunt. Je kunt dan zelf zeggen dat je toch door wilt.</p>
+  <p class="ul-tip"><b>Tip voor op de boot of in het vliegtuig:</b> gaat je telefoon via een satelliet, dan gelden de EU-regels niet en kan het heel duur worden. Zet dan roaming uit of je telefoon in vliegtuigmodus.</p>
+  <p class="ul-tip"><b>Tip bij de grens:</b> in de buurt van Turkije, Albanië, Bosnië en Herzegovina, Andorra of Noord-Macedonië kan je telefoon ongemerkt een netwerk van buiten de EU kiezen. Dan lopen de kosten snel op. Zo staat het bij hollandsnieuwe.</p>
+  <p><b>Lang in het buitenland?</b> Ben je over 4 maanden gemeten vaker in het buitenland dan thuis, en gebruik je je telefoon daar ook meer, dan mag je aanbieder om uitleg vragen. Blijft dat zo, dan mag hij een toeslag rekenen. Ook daar heeft de EU een maximum voor.</p>
+  <p><b>Buiten de EU</b> kan internet erg duur zijn. Kijk voor je vertrek wat het kost, of neem een buitenlandbundel van je aanbieder.</p>
+  <p class="ul-verder"><a href="verschillen-sim-only.html#per-aanbieder">Buitenland per aanbieder →</a></p>
+  </section>
+
+  <section class="ul-blok">
+  <h2 id="looptijd">📅 Looptijd: 2 jaar, 1 jaar of maandelijks opzegbaar</h2>
+  <p class="ul-kort"><b>In het kort:</b> 2 jaar is meestal het goedkoopst. Na de looptijd zeg je altijd kosteloos op, met hoogstens 1 maand opzegtermijn. Dat staat bij de ACM.</p>
+  <table class="ul-tabel">
+    <tr><th>Looptijd</th><th>Extra per maand</th><th>Extra per jaar</th></tr>
+    <tr><td>2 jaar</td><td>niets</td><td>niets</td></tr>
+    <tr><td>1 jaar</td><td>€ 1</td><td>€ 12</td></tr>
+    <tr><td>Maandelijks opzegbaar</td><td>€ 2 tot € 2,50</td><td>€ 24 tot € 30</td></tr>
+  </table>
+  <p class="uitleg-kort">Bij de aanbieders die de meerprijs op hun site noemen: 1 jaar bij 50+ Mobiel, Budget Thuis, KPN, Lebara, Simyo en Vodafone; maandelijks bij KPN, Lebara en Simyo.</p>
+  <p><b>Langer dan 2 jaar mag niet.</b> Een aanbieder mag je niet langer dan 2 jaar aan een abonnement vasthouden.</p>
+  <p><b>Na de looptijd</b> loopt je abonnement gewoon door als je niets doet. Je kunt dan altijd opzeggen, zonder kosten, met een opzegtermijn van hoogstens 1 maand. Die maand begint op de dag dat je opzegt.</p>
+  <p><b>Bericht vooraf:</b> minstens 1 maand voor het einde stuurt je aanbieder je een bericht, met de voordeligste tarieven die dan gelden. Je hoeft daar niet op in te gaan. Doe je dat wel, dan begint vaak een nieuwe looptijd van 1 of 2 jaar.</p>
+  <p><b>Opzeggen</b> mag altijd schriftelijk: per brief, webformulier of mail. Sloot je online af, dan moet je ook online kunnen opzeggen. Vraag om een bevestiging per mail of brief.</p>
+  <p class="ul-tip"><b>Let op de actieprijs:</b> een korting geldt vaak maar een deel van de looptijd, bijvoorbeeld 12 maanden. Daarom rekenen wij met wat je in 2 jaar echt betaalt.</p>
+  <p class="ul-verder"><a href="sim-only.html#keuze">Zie wat je in 2 jaar betaalt →</a></p>
+  </section>
+
+  <section class="ul-blok">
+  <h2 id="dataplafond">🛑 Dataplafond: geen verrassing op je rekening</h2>
+  <p class="ul-kort"><b>In het kort:</b> een dataplafond zorgt dat je niet bijbetaalt als je bundel op is. Heeft je aanbieder er een, zet hem dan aan. Soms is hij gratis of staat hij standaard aan, soms kost hij € 0,50 tot € 1 per maand.</p>
+  <p><b>Wat gebeurt er zonder?</b> Dan kan internet buiten je bundel per MB kosten. Bij Simyo is dat zonder plafond € 0,15 per MB: 100 MB kost dan al € 15.</p>
+  <p><b>Zo regelt elke aanbieder het:</b></p>
+  <ul class="ul-lijst"><li><b>50+ Mobiel:</b> nu gratis (normaal € 0,50 per maand)</li><li><b>Ben:</b> gratis, standaard aan (max. € 5 buiten de bundel)</li><li><b>Budget Thuis:</b> kan niet buiten de bundel</li><li><b>hollandsnieuwe:</b> buiten de bundel alleen met prepaid tegoed</li><li><b>KPN:</b> geen extra kosten · bundel op = heel langzaam (64 kbit/s)</li><li><b>Lebara:</b> standaard maximaal € 50 buiten de bundel</li><li><b>Odido:</b> geen plafond genoemd · wel blokkades in Mijn Odido</li><li><b>Simpel:</b> € 0,50 per maand</li><li><b>Simyo:</b> € 1 per maand (zonder: € 0,15 per MB)</li><li><b>Vodafone:</b> gratis langzaam internet (zelf aanzetten)</li><li><b>Youfone:</b> € 0,50 per maand</li></ul>
+  <p><b>Hoe zet je hem aan?</b> Meestal in de app of op de Mijn-pagina van je aanbieder. Zie je het niet staan, vraag het dan aan de klantenservice.</p>
+  <p class="ul-verder"><a href="verschillen-sim-only.html#per-aanbieder">Dataplafond per aanbieder →</a></p>
+  </section>
+
+  <section class="ul-blok">
+  <h2 id="bellen">📞 Bellen: minuten of onbeperkt?</h2>
+  <p class="ul-kort"><b>In het kort:</b> kijk in de app van je huidige aanbieder hoeveel minuten je per maand belt. Bel je minder dan er in een bundel zitten, dan heb je onbeperkt bellen niet nodig.</p>
+  <p><b>Bellen via WhatsApp of FaceTime</b> gaat via internet. Dat telt voor je data, niet voor je belminuten.</p>
+  <p><b>Minuten op?</b> Dan betaal je per minuut. Bij KPN is dat € 0,23 per minuut en € 0,07 per sms.</p>
+  <p><b>In de EU</b> bel je met dezelfde minuten als thuis, ook naar Nederland. Gebeld worden kost in de EU niets extra.</p>
+  <p>Op onze site zijn er bundels met 150, 200, 250 en 400 minuten per maand, of met onbeperkt bellen.</p>
+  <p class="ul-verder"><a href="sim-only-onbeperkt-bellen.html">Sim only met onbeperkt bellen →</a></p>
+  </section>
+
+  <section class="ul-blok">
+  <h2 id="5g-esim">📶 5G en eSIM</h2>
+  <p><b>5G</b> is het nieuwste mobiele netwerk. Je hebt er een telefoon voor nodig die 5G kan, en 5G-bereik waar je bent. Bij 10 van de 11 aanbieders op onze site zit 5G erbij (Budget Thuis noemt het niet op de sim only-pagina).</p>
+  <p><b>eSIM</b> is een simkaart die al in je telefoon zit. Je zet hem aan met een QR-code of in de app van je aanbieder, zonder te wachten op een kaartje in de brievenbus. Je telefoon moet eSIM wel kunnen. Bij 9 van de 11 aanbieders kan het (Lebara en Budget Thuis noemen het niet op hun sim only-pagina).</p>
+  </section>
+
+  <section class="ul-blok">
+  <h2 id="netwerk">🗼 Netwerk: KPN, Odido of Vodafone</h2>
+  <p>In Nederland zijn er drie mobiele netwerken: KPN, Odido en Vodafone. Alle andere aanbieders gebruiken een van die drie. Op het KPN-netwerk: Budget Thuis, KPN, Lebara, Simyo en Youfone. Op het Odido-netwerk: Ben, Odido en Simpel. Op het Vodafone-netwerk: 50+ Mobiel, hollandsnieuwe en Vodafone.</p>
+  <p class="ul-verder"><a href="op-welk-netwerk-zit.html">Op welk netwerk zit jouw aanbieder →</a></p>
+  </section>
+
+  <h2 id="kiezen">Klaar om te kiezen?</h2>
+  <div class="ul-knoppen"><a class="go" href="verschillen-sim-only.html#per-aanbieder">Bekijk de verschillen per aanbieder →</a> <a class="go" href="sim-only.html#keuze">Zie wat je in 2 jaar betaalt →</a></div>
+
+  <p class="ul-bronnen"><b>Bronnen</b> (nagelezen op 25 november 2026): <a href="https://europa.eu/youreurope/citizens/consumers/internet-telecoms/mobile-roaming-costs/index_nl.htm" rel="noopener" target="_blank">Your Europe: roaming in de EU</a> · <a href="https://digital-strategy.ec.europa.eu/en/faqs/roaming-questions-answers" rel="noopener" target="_blank">Europese Commissie: Roaming, vragen en antwoorden</a> · <a href="https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:32022R0612" rel="noopener" target="_blank">EU-verordening 2022/612, artikel 11</a> · <a href="https://consument.acm.nl/telefoon-internet-en-televisie/abonnementen/wanneer-abonnement-opzeggen" rel="noopener" target="_blank">ACM ConsuWijzer: telecomabonnement opzeggen</a> · <a href="https://help.netflix.com/nl/node/306" rel="noopener" target="_blank">Netflix: aanbevolen internetsnelheden</a> · <a href="https://support.google.com/youtube/answer/78358?hl=nl" rel="noopener" target="_blank">YouTube Help: systeemvereisten</a> · <a href="https://www.kpn.com/mobiel-abonnement/bundels" rel="noopener" target="_blank">KPN: bundel op</a>. Alles per aanbieder komt van hun eigen sim only-pagina, gezien op 24 en 25 november 2026. Geen koopadvies.</p>
+
+</article>
+
+<footer>
+  <div class="wrap">
+    <p class="disc"><strong>Affiliate-vermelding:</strong> deze site kan links bevatten waarvoor wij een vergoeding ontvangen als je via ons een abonnement afsluit of iets koopt. Dat kost jou niets extra en beïnvloedt onze volgorde niet. Als Amazon-partner verdienen wij aan in aanmerking komende aankopen.</p>
+    <div class="fbot">
+      <span>© 2026 eerlijktelecomadvies.nl</span>
+      <span>
+        <a href="over-ons.html">Over ons</a> ·
+        <a href="contact.html">Contact</a> ·
+        <a href="privacy.html">Privacy &amp; cookies</a> ·
+        <a href="affiliate-beleid.html">Affiliate-beleid</a> ·
+        <a href="disclaimer.html">Disclaimer</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
