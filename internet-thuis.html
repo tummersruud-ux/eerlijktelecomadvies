@@ -264,6 +264,9 @@ td.prov a.aanb:hover{color:var(--signal);border-bottom-color:var(--signal)}
 .th-los p{margin:4px 0 0}
 .th-samenlink{margin-top:16px;font-weight:600}
 .th-bronnen{font-size:14px;color:var(--ink-soft)}
+.th-kost{width:100%;min-width:0;border-collapse:collapse;margin:12px 0 8px;background:var(--card);border:1px solid var(--line)}
+.th-kost th,.th-kost td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);font-size:15px;vertical-align:top}
+@media (max-width:560px){.th-kost th,.th-kost td{padding:7px 8px;font-size:13.5px}}
 @media (max-width:820px){.th-pk{grid-template-columns:1fr}}
 /* AUTO:STIJL (gemaakt door _bouw/maak.py; vriendelijke stijl 17-11-2026) */
 :root{--paper:#FBF8F3;--ink:#1D2A35;--ink-soft:#5B6874;--signal:#0F8A6C;--signal-tint:#E2F3EC;--line:#ECE6DC;--zon:#FFD66B;--mono:"IBM Plex Sans","Segoe UI",system-ui,sans-serif}
@@ -352,6 +355,7 @@ img.logo{display:block;width:auto;max-width:120px;object-fit:contain;margin:8px 
 <script data-goatcounter="https://eerlijktelecomadvies.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script>document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a[data-aff]"):null;if(!a||!window.goatcounter||!window.goatcounter.count)return;var n=a.getAttribute("data-aff")||"link",p=location.pathname.replace(/^\/|\.html$/g,"")||"home";window.goatcounter.count({path:"klik/"+n.toLowerCase().replace(/[^a-z0-9]+/g,"-")+"/"+p,title:"Klik naar "+n+" op "+p,event:true});},true);</script>
 <!-- /teller -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wat kost internet thuis per maand?", "acceptedAnswer": {"@type": "Answer", "text": "Gerekend over 2 jaar, met de actie, de prijs daarna en de eenmalige kosten: alleen internet gemiddeld € 21,25 tot € 65,00 per maand, internet en tv € 27,98 tot € 80,40, internet, tv en vast bellen € 34,71 tot € 85,90. Bij de 6 aanbieders die wij vergelijken, gezien op 18 en 24 november 2026."}}, {"@type": "Question", "name": "Wat betaal je voor internet thuis na de actie?", "acceptedAnswer": {"@type": "Answer", "text": "Na de actie betaal je voor alleen internet € 26,00 tot € 74,95 per maand, voor internet en tv € 39,50 tot € 91,40. Daarom rekenen wij met alle 24 maanden."}}]}</script>
 </head>
 <body>
 
@@ -496,6 +500,16 @@ if(h.get('pakket')){var bp=document.querySelector('.th-pk button[data-pk="'+h.ge
 
   <p class="intro">Internet, tv en vast bellen van KPN, Ziggo, Odido, Budget Thuis, Youfone en Delta. Wij tellen alle 24 maanden op, met de actie én de prijs daarna.</p>
 
+
+  <h2 id="kosten">Wat kost internet thuis?</h2>
+  <p>Gerekend over 2 jaar, met de actie, de prijs daarna en de eenmalige kosten, bij de 6 aanbieders die wij vergelijken (Budget Thuis, Delta, KPN, Odido, Youfone en Ziggo), gezien op 18 en 24 november 2026:</p>
+  <table class="th-kost">
+    <tr><th>Pakket</th><th>Gemiddeld per maand over 2 jaar</th><th>Na de actie per maand</th></tr>
+    <tr><td>Alleen internet</td><td>€ 21,25 tot € 65,00</td><td>€ 26,00 tot € 74,95</td></tr>
+    <tr><td>Internet en tv</td><td>€ 27,98 tot € 80,40</td><td>€ 39,50 tot € 91,40</td></tr>
+    <tr><td>Internet, tv en vast bellen</td><td>€ 34,71 tot € 85,90</td><td>€ 49,00 tot € 96,35</td></tr>
+  </table>
+  <p>Het laagste bedrag over 2 jaar voor alleen internet: <strong>Youfone Internet 50 Mbit/s</strong>, gemiddeld € 21,25 per maand (via telefoonlijn (DSL)). Wat je kunt krijgen, hangt af van je adres; de snelheid verschilt per pakket. Kies hierboven wat je nodig hebt, dan zie je alle pakketten op volgorde van prijs.</p>
 
   <h2>Zo rekenen wij</h2>
   <p>Bijna elke aanbieder begint met een lage prijs voor de eerste 12 tot 15 maanden. Daarna betaal je de gewone prijs. Wij tellen alle 24 maanden op, met de eenmalige kosten erbij. Zo zie je wat internet thuis je echt kost in 2 jaar, en niet alleen de eerste maand.</p>

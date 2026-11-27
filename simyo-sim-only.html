@@ -232,6 +232,10 @@ a.simlink{display:block;margin-top:12px;font-weight:600;font-size:14.5px;color:v
 @media (max-width:560px){.nettabel th,.nettabel td{padding:9px 7px;font-size:13.5px}.nettabel th{font-size:10px;letter-spacing:.04em}.nettabel td a{word-break:break-all}.netlabel{font-size:11px;padding:2px 6px}}
 
 /* Pagina per aanbieder (17-11-2026) */
+.ab-dl{display:grid;grid-template-columns:max-content 1fr;gap:8px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0 0;line-height:1.5}
+.ab-dl dt{color:var(--ink-soft)}.ab-dl dd{margin:0;font-weight:600}
+@media (max-width:560px){.ab-dl{grid-template-columns:1fr;gap:2px}.ab-dl dd{margin-bottom:8px}}
+.vs-let{background:#FFF4D6;border-radius:10px;padding:8px 12px;margin:12px 0 0;font-size:.95rem}
 .plekken{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:16px}
 .plekken .pl{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--k);padding:16px 18px}
 .plekken .pl h3{margin:0 0 4px;font-size:16px}
@@ -325,7 +329,7 @@ img.logo{display:block;width:auto;max-width:120px;object-fit:contain;margin:8px 
 <script data-goatcounter="https://eerlijktelecomadvies.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script>document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a[data-aff]"):null;if(!a||!window.goatcounter||!window.goatcounter.count)return;var n=a.getAttribute("data-aff")||"link",p=location.pathname.replace(/^\/|\.html$/g,"")||"home";window.goatcounter.count({path:"klik/"+n.toLowerCase().replace(/[^a-z0-9]+/g,"-")+"/"+p,title:"Klik naar "+n+" op "+p,event:true});},true);</script>
 <!-- /teller -->
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Op welk netwerk zit Simyo?", "acceptedAnswer": {"@type": "Answer", "text": "Simyo zit op het KPN-netwerk. Simyo schrijft op zijn eigen site dat je met Simyo voor bellen en internet het netwerk van KPN gebruikt."}}, {"@type": "Question", "name": "Wat kost Simyo sim only?", "acceptedAnswer": {"@type": "Answer", "text": "De goedkoopste bundel van Simyo die wij vergelijken is 20 GB: gemiddeld € 7,75 per maand over 2 jaar (eerste 12 maanden € 3,50, daarna € 12,00). Nagekeken op 24 november 2026 op simyo.nl, inclusief btw."}}, {"@type": "Question", "name": "Is Simyo de goedkoopste sim only?", "acceptedAnswer": {"@type": "Answer", "text": "Per hoeveelheid data: rond 10 GB plek 8 van 10; 20 tot 30 GB plek 6 van 10; 40 GB of meer plek 6 van 7. Dat gaat alleen over de prijs; de service of het bereik testen wij niet."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Op welk netwerk zit Simyo?", "acceptedAnswer": {"@type": "Answer", "text": "Simyo zit op het KPN-netwerk. Simyo schrijft op zijn eigen site dat je met Simyo voor bellen en internet het netwerk van KPN gebruikt."}}, {"@type": "Question", "name": "Wat kost Simyo sim only?", "acceptedAnswer": {"@type": "Answer", "text": "De goedkoopste bundel van Simyo die wij vergelijken is 20 GB: gemiddeld € 7,75 per maand over 2 jaar (eerste 12 maanden € 3,50, daarna € 12,00). Nagekeken op 24 november 2026 op simyo.nl, inclusief btw."}}, {"@type": "Question", "name": "Is Simyo de goedkoopste sim only?", "acceptedAnswer": {"@type": "Answer", "text": "Per hoeveelheid data: rond 10 GB plek 8 van 10; 20 tot 30 GB plek 6 van 10; 40 GB of meer plek 6 van 7. Dat gaat alleen over de prijs; de service of het bereik testen wij niet."}}, {"@type": "Question", "name": "Hoe snel is internet bij Simyo?", "acceptedAnswer": {"@type": "Answer", "text": "Volgens de site van Simyo: standaard 5G-internet tot 300 Mbit/s."}}, {"@type": "Question", "name": "Werkt Simyo in het buitenland?", "acceptedAnswer": {"@type": "Answer", "text": "Volgens de site van Simyo: Bundel geldt in alle EU-landen. Ook zonder extra kosten in het Verenigd Koninkrijk, Zwitserland, Andorra, Noorwegen, IJsland, Monaco en Liechtenstein."}}, {"@type": "Question", "name": "Heeft Simyo een dataplafond?", "acceptedAnswer": {"@type": "Answer", "text": "Volgens de site van Simyo: Dataplafond € 1 per maand; zonder plafond betaal je € 0,15 per MB als je bundel op is."}}, {"@type": "Question", "name": "Kan ik bij Simyo maandelijks opzeggen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Volgens de site van Simyo kan het zo: 24 maanden (12 maanden korting); 12 maanden € 1 per maand extra (6 maanden korting); maandelijks opzegbaar € 2 per maand extra. Na de vaste looptijd kun je volgens de ACM altijd opzeggen, met hoogstens 1 maand opzegtermijn."}}]}</script>
 </head>
 <body>
 
@@ -453,6 +457,17 @@ img.logo{display:block;width:auto;max-width:120px;object-fit:contain;margin:8px 
   </div>
   <p class="uitleg-kort">Alle bundels door elkaar, ook van de andere aanbieders, staan op <a href="sim-only.html">sim only vergelijken</a>.</p>
 
+  <h2 id="verschil">Zo verschilt Simyo van andere aanbieders</h2>
+  <p>Twee bundels met evenveel GB kunnen heel anders zijn. Dit zegt Simyo zelf op zijn site over snelheid, buitenland, looptijd en dataplafond (gezien op 24 en 25 november 2026).</p>
+  <dl class="ab-dl">
+    <dt>Snelheid</dt><dd>standaard 5G-internet tot 300 Mbit/s</dd>
+    <dt>Buitenland</dt><dd>Bundel geldt in alle EU-landen. Ook zonder extra kosten in het Verenigd Koninkrijk, Zwitserland, Andorra, Noorwegen, IJsland, Monaco en Liechtenstein</dd>
+    <dt>Looptijd</dt><dd>24 maanden (12 maanden korting); 12 maanden € 1 per maand extra (6 maanden korting); maandelijks opzegbaar € 2 per maand extra</dd>
+    <dt>Dataplafond</dt><dd>€ 1 per maand; zonder plafond betaal je € 0,15 per MB als je bundel op is</dd>
+    <dt>eSIM</dt><dd>ja</dd>
+  </dl>
+  <p class="uitleg-kort">Naast de andere aanbieders: <a href="verschillen-sim-only.html">verschillen tussen aanbieders</a>. Wat het betekent: <a href="sim-only-uitleg.html">sim only uitgelegd</a>.</p>
+
   <h2 id="netwerk">Op welk netwerk zit Simyo?</h2>
   <div class="netblok" style="--k:#1E8A3C">
     <p>Simyo zit op het KPN-netwerk. Simyo schrijft op zijn eigen site dat je met Simyo voor bellen en internet het netwerk van KPN gebruikt.</p>
@@ -480,6 +495,14 @@ img.logo{display:block;width:auto;max-width:120px;object-fit:contain;margin:8px 
   <p>De goedkoopste bundel van Simyo die wij vergelijken is 20 GB: gemiddeld € 7,75 per maand over 2 jaar (eerste 12 maanden € 3,50, daarna € 12,00). Nagekeken op 24 november 2026 op simyo.nl, inclusief btw.</p>
   <h3>Is Simyo de goedkoopste sim only?</h3>
   <p>Per hoeveelheid data: rond 10 GB plek 8 van 10; 20 tot 30 GB plek 6 van 10; 40 GB of meer plek 6 van 7. Dat gaat alleen over de prijs; de service of het bereik testen wij niet.</p>
+  <h3>Hoe snel is internet bij Simyo?</h3>
+  <p>Volgens de site van Simyo: standaard 5G-internet tot 300 Mbit/s.</p>
+  <h3>Werkt Simyo in het buitenland?</h3>
+  <p>Volgens de site van Simyo: Bundel geldt in alle EU-landen. Ook zonder extra kosten in het Verenigd Koninkrijk, Zwitserland, Andorra, Noorwegen, IJsland, Monaco en Liechtenstein.</p>
+  <h3>Heeft Simyo een dataplafond?</h3>
+  <p>Volgens de site van Simyo: Dataplafond € 1 per maand; zonder plafond betaal je € 0,15 per MB als je bundel op is.</p>
+  <h3>Kan ik bij Simyo maandelijks opzeggen?</h3>
+  <p>Ja. Volgens de site van Simyo kan het zo: 24 maanden (12 maanden korting); 12 maanden € 1 per maand extra (6 maanden korting); maandelijks opzegbaar € 2 per maand extra. Na de vaste looptijd kun je volgens de ACM altijd opzeggen, met hoogstens 1 maand opzegtermijn.</p>
 
   <p class="uitleg-kort">Prijzen nagekeken op 24 november 2026, het netwerk op 17 november 2026, op <a href="https://www.simyo.nl/sim-only" rel="nofollow noopener" target="_blank">simyo.nl</a>, inclusief btw. "Goedkoopste" betekent: van de 11 aanbieders die wij vergelijken. Staat bij een actie niet hoe lang die geldt, dan rekenen we met de normale prijs. Prijzen veranderen vaak; kijk vóór je overstapt altijd de actuele prijs na bij Simyo. De volgorde is altijd op prijs. Zie ons <a href="affiliate-beleid.html">affiliate-beleid</a>.</p>
 </article>

@@ -232,6 +232,10 @@ a.simlink{display:block;margin-top:12px;font-weight:600;font-size:14.5px;color:v
 @media (max-width:560px){.nettabel th,.nettabel td{padding:9px 7px;font-size:13.5px}.nettabel th{font-size:10px;letter-spacing:.04em}.nettabel td a{word-break:break-all}.netlabel{font-size:11px;padding:2px 6px}}
 
 /* Pagina per aanbieder (17-11-2026) */
+.ab-dl{display:grid;grid-template-columns:max-content 1fr;gap:8px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0 0;line-height:1.5}
+.ab-dl dt{color:var(--ink-soft)}.ab-dl dd{margin:0;font-weight:600}
+@media (max-width:560px){.ab-dl{grid-template-columns:1fr;gap:2px}.ab-dl dd{margin-bottom:8px}}
+.vs-let{background:#FFF4D6;border-radius:10px;padding:8px 12px;margin:12px 0 0;font-size:.95rem}
 .plekken{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:16px}
 .plekken .pl{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--k);padding:16px 18px}
 .plekken .pl h3{margin:0 0 4px;font-size:16px}
@@ -325,7 +329,7 @@ img.logo{display:block;width:auto;max-width:120px;object-fit:contain;margin:8px 
 <script data-goatcounter="https://eerlijktelecomadvies.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script>document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a[data-aff]"):null;if(!a||!window.goatcounter||!window.goatcounter.count)return;var n=a.getAttribute("data-aff")||"link",p=location.pathname.replace(/^\/|\.html$/g,"")||"home";window.goatcounter.count({path:"klik/"+n.toLowerCase().replace(/[^a-z0-9]+/g,"-")+"/"+p,title:"Klik naar "+n+" op "+p,event:true});},true);</script>
 <!-- /teller -->
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Op welk netwerk zit 50+ Mobiel?", "acceptedAnswer": {"@type": "Answer", "text": "50+ Mobiel zit op het Vodafone-netwerk. 50+ Mobiel schrijft op zijn eigen site dat het de 5G-masten van Vodafone gebruikt."}}, {"@type": "Question", "name": "Wat kost 50+ Mobiel sim only?", "acceptedAnswer": {"@type": "Answer", "text": "De goedkoopste bundel van 50+ Mobiel die wij vergelijken is 10 GB: gemiddeld € 5,00 per maand over 2 jaar (eerste 12 maanden € 2,50, daarna € 7,50). Nagekeken op 24 november 2026 op 50plusmobiel.nl, inclusief btw."}}, {"@type": "Question", "name": "Is 50+ Mobiel de goedkoopste sim only?", "acceptedAnswer": {"@type": "Answer", "text": "Per hoeveelheid data: rond 10 GB plek 3 van 10; 20 tot 30 GB plek 2 van 10; 40 GB of meer plek 2 van 7. Dat gaat alleen over de prijs; de service of het bereik testen wij niet."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Op welk netwerk zit 50+ Mobiel?", "acceptedAnswer": {"@type": "Answer", "text": "50+ Mobiel zit op het Vodafone-netwerk. 50+ Mobiel schrijft op zijn eigen site dat het de 5G-masten van Vodafone gebruikt."}}, {"@type": "Question", "name": "Wat kost 50+ Mobiel sim only?", "acceptedAnswer": {"@type": "Answer", "text": "De goedkoopste bundel van 50+ Mobiel die wij vergelijken is 10 GB: gemiddeld € 5,00 per maand over 2 jaar (eerste 12 maanden € 2,50, daarna € 7,50). Nagekeken op 24 november 2026 op 50plusmobiel.nl, inclusief btw."}}, {"@type": "Question", "name": "Is 50+ Mobiel de goedkoopste sim only?", "acceptedAnswer": {"@type": "Answer", "text": "Per hoeveelheid data: rond 10 GB plek 3 van 10; 20 tot 30 GB plek 2 van 10; 40 GB of meer plek 2 van 7. Dat gaat alleen over de prijs; de service of het bereik testen wij niet."}}, {"@type": "Question", "name": "Hoe snel is internet bij 50+ Mobiel?", "acceptedAnswer": {"@type": "Answer", "text": "Volgens de site van 50+ Mobiel: 5G tot 350 Mbit/s."}}, {"@type": "Question", "name": "Werkt 50+ Mobiel in het buitenland?", "acceptedAnswer": {"@type": "Answer", "text": "Volgens de site van 50+ Mobiel: Geldig in de hele EU."}}, {"@type": "Question", "name": "Heeft 50+ Mobiel een dataplafond?", "acceptedAnswer": {"@type": "Answer", "text": "Volgens de site van 50+ Mobiel: Kostenplafond te kiezen; nu € 0 (normaal € 0,50 per maand)."}}, {"@type": "Question", "name": "Kan ik bij 50+ Mobiel maandelijks opzeggen?", "acceptedAnswer": {"@type": "Answer", "text": "Op de site van 50+ Mobiel staat maandelijks opzegbaar niet. Wel: 2 jaar; 1 jaar € 1 per maand extra. Na de vaste looptijd kun je volgens de ACM altijd opzeggen, met hoogstens 1 maand opzegtermijn."}}]}</script>
 </head>
 <body>
 
@@ -444,6 +448,18 @@ img.logo{display:block;width:auto;max-width:120px;object-fit:contain;margin:8px 
   </div>
   <p class="uitleg-kort">Alle bundels door elkaar, ook van de andere aanbieders, staan op <a href="sim-only.html">sim only vergelijken</a>.</p>
 
+  <h2 id="verschil">Zo verschilt 50+ Mobiel van andere aanbieders</h2>
+  <p>Twee bundels met evenveel GB kunnen heel anders zijn. Dit zegt 50+ Mobiel zelf op zijn site over snelheid, buitenland, looptijd en dataplafond (gezien op 24 en 25 november 2026).</p>
+  <dl class="ab-dl">
+    <dt>Snelheid</dt><dd>5G tot 350 Mbit/s</dd>
+    <dt>Buitenland</dt><dd>Geldig in de hele EU</dd>
+    <dt>Looptijd</dt><dd>2 jaar; 1 jaar € 1 per maand extra</dd>
+    <dt>Dataplafond</dt><dd>Kostenplafond te kiezen; nu € 0 (normaal € 0,50 per maand)</dd>
+    <dt>eSIM</dt><dd>ja</dd>
+  </dl>
+  <p class="vs-let">Let op: onbeperkt bellen en sms gratis.</p>
+  <p class="uitleg-kort">Naast de andere aanbieders: <a href="verschillen-sim-only.html">verschillen tussen aanbieders</a>. Wat het betekent: <a href="sim-only-uitleg.html">sim only uitgelegd</a>.</p>
+
   <h2 id="netwerk">Op welk netwerk zit 50+ Mobiel?</h2>
   <div class="netblok" style="--k:#D21F2B">
     <p>50+ Mobiel zit op het Vodafone-netwerk. 50+ Mobiel schrijft op zijn eigen site dat het de 5G-masten van Vodafone gebruikt.</p>
@@ -471,6 +487,14 @@ img.logo{display:block;width:auto;max-width:120px;object-fit:contain;margin:8px 
   <p>De goedkoopste bundel van 50+ Mobiel die wij vergelijken is 10 GB: gemiddeld € 5,00 per maand over 2 jaar (eerste 12 maanden € 2,50, daarna € 7,50). Nagekeken op 24 november 2026 op 50plusmobiel.nl, inclusief btw.</p>
   <h3>Is 50+ Mobiel de goedkoopste sim only?</h3>
   <p>Per hoeveelheid data: rond 10 GB plek 3 van 10; 20 tot 30 GB plek 2 van 10; 40 GB of meer plek 2 van 7. Dat gaat alleen over de prijs; de service of het bereik testen wij niet.</p>
+  <h3>Hoe snel is internet bij 50+ Mobiel?</h3>
+  <p>Volgens de site van 50+ Mobiel: 5G tot 350 Mbit/s.</p>
+  <h3>Werkt 50+ Mobiel in het buitenland?</h3>
+  <p>Volgens de site van 50+ Mobiel: Geldig in de hele EU.</p>
+  <h3>Heeft 50+ Mobiel een dataplafond?</h3>
+  <p>Volgens de site van 50+ Mobiel: Kostenplafond te kiezen; nu € 0 (normaal € 0,50 per maand).</p>
+  <h3>Kan ik bij 50+ Mobiel maandelijks opzeggen?</h3>
+  <p>Op de site van 50+ Mobiel staat maandelijks opzegbaar niet. Wel: 2 jaar; 1 jaar € 1 per maand extra. Na de vaste looptijd kun je volgens de ACM altijd opzeggen, met hoogstens 1 maand opzegtermijn.</p>
 
   <p class="uitleg-kort">Prijzen nagekeken op 24 november 2026, het netwerk op 16 november 2026, op <a href="https://bestellen.50plusmobiel.nl/sim-only" rel="nofollow noopener" target="_blank">50plusmobiel.nl</a>, inclusief btw. "Goedkoopste" betekent: van de 11 aanbieders die wij vergelijken. Staat bij een actie niet hoe lang die geldt, dan rekenen we met de normale prijs. Prijzen veranderen vaak; kijk vóór je overstapt altijd de actuele prijs na bij 50+ Mobiel. De volgorde is altijd op prijs. Zie ons <a href="affiliate-beleid.html">affiliate-beleid</a>.</p>
 </article>
